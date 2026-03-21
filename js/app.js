@@ -204,6 +204,7 @@
     if (e.key === '5') switchView('culture');
     if (e.key === '6') switchView('gender');
     if (e.key === '7') switchView('nation');
+    if (e.key === '8') switchView('postindustrial');
   });
 
 })();

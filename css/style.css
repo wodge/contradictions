@@ -191,6 +191,7 @@ html, body {
 .icard--culture   { --c: #d4922a; }
 .icard--gender    { --c: #c44dff; }
 .icard--nation    { --c: #2196f3; }
+.icard--postindustrial { --c: #00bcd4; }
 .icard:hover { border-top-color: var(--c); box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 30px rgba(var(--c-rgb, 255,255,255),.06); }
 .icard--classical:hover { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(245,166,35,.1); }
 .icard--modern:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(59,158,255,.1); }
@@ -199,6 +200,7 @@ html, body {
 .icard--culture:hover   { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(212,146,42,.18); }
 .icard--gender:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(196,77,255,.18); }
 .icard--nation:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(33,150,243,.18); }
+.icard--postindustrial:hover { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(0,188,212,.18); }
 
 .icard-num {
   font-family: 'Cinzel', serif;
@@ -551,6 +553,9 @@ canvas {
 }
 #app[data-view="nation"] {
   --accent: #2196f3;
+}
+#app[data-view="postindustrial"] {
+  --accent: #00bcd4;
 }
 
 /* ══════════════════════════════════════════════════════════

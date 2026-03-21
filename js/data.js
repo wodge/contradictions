@@ -1275,3 +1275,233 @@ DATA.nation = {
     ["gdp_migration",            "border_ideology"]
   ]
 };
+
+// ══════════════════════════════════════════════════════════
+//  VIII. POST-INDUSTRIAL CAPITALISM
+//  Service sectors, debt, low productivity and the
+//  challenge of Modern Monetary Theory
+// ══════════════════════════════════════════════════════════
+DATA.postindustrial = {
+  label: "Post-Industrial Capitalism",
+  desc:  "Deindustrialisation hollowed out the productive economy and replaced it with services, debt and financialisation. National debt is weaponised to justify austerity. Personal debt disciplines workers as wages once did. Low productivity is structural, not accidental. And MMT reveals that the money was always there — the question was always political, not economic.",
+  accentColor: '#00bcd4',
+  thesisColor: '#00bcd4',
+
+  clusters: [
+    { label: "I. Deindustrialisation & Services",  x: .10,  y: .05 },
+    { label: "II. National Debt & Austerity",       x: .34,  y: .05 },
+    { label: "III. Personal Debt",                  x: .60,  y: .05 },
+    { label: "IV. Low Productivity Trap",           x: .84,  y: .05 },
+    { label: "V. Modern Monetary Theory",           x: .28,  y: .54 },
+    { label: "VI. Post-Industrial Politics",        x: .72,  y: .54 }
+  ],
+
+  nodes: [
+
+    // ── I. Deindustrialisation & Services ─────────────────
+    {
+      id: "industrial_economy", type: "thesis", color: "#00bcd4",
+      label: "Industrial\nEconomy",
+      rx: .06, ry: .18, cluster: "I. Deindustrialisation & Services",
+      desc: "The post-war industrial economy: high-wage manufacturing jobs, strong trade unions, productivity growth tied to real production. Workers made things — steel, cars, textiles, chemicals — and the value created was broadly shared through collective bargaining. Not without exploitation, but with a material basis for working-class organisation and a clear connection between labour and social wealth.",
+      relates: "The productive economy — things made, value shared"
+    },
+    {
+      id: "service_sector", type: "antithesis", color: "#ff6b35",
+      label: "The Service\nEconomy",
+      rx: .17, ry: .18, cluster: "I. Deindustrialisation & Services",
+      desc: "The shift from making things to serving people: retail, hospitality, care, logistics, call centres, gig platforms. Service work is harder to automate, harder to unionise, harder to measure for productivity. Pay is typically lower, conditions worse, hours less predictable. The service economy is not a natural evolution but the political consequence of deindustrialisation — what's left when manufacturing is offshored in search of cheaper labour.",
+      relates: "What remains when manufacturing is offshored"
+    },
+    {
+      id: "knowledge_economy_myth", type: "synthesis", color: "#18c97c",
+      label: "Knowledge\nEconomy Myth",
+      rx: .115, ry: .34, cluster: "I. Deindustrialisation & Services",
+      desc: "The promise: deindustrialisation would be offset by high-skill, high-wage knowledge work — finance, tech, creative industries, higher education. The reality: a polarised hourglass economy with a thin layer of high-paid knowledge workers at the top, a gutted middle, and a vast low-wage service sector at the bottom. The knowledge economy is real for some and a broken promise for most.",
+      relates: "The hourglass economy — thin top, vast bottom"
+    },
+
+    // ── II. National Debt & Austerity ─────────────────────
+    {
+      id: "keynesian_deficit", type: "thesis", color: "#00bcd4",
+      label: "Keynesian\nDeficit Spending",
+      rx: .28, ry: .18, cluster: "II. National Debt & Austerity",
+      desc: "Keynes: in a recession, private demand collapses and only the state can fill the gap. Government should borrow and spend — on infrastructure, public services, employment — to stimulate the economy. The multiplier effect means a pound of public spending generates more than a pound of economic activity. Deficits in downturns, surpluses in booms. This was the economic orthodoxy from 1945 to 1979.",
+      relates: "The state as spender of last resort"
+    },
+    {
+      id: "debt_as_weapon", type: "antithesis", color: "#ff6b35",
+      label: "Debt as\nPolitical Weapon",
+      rx: .40, ry: .18, cluster: "II. National Debt & Austerity",
+      desc: "The national debt is not like a household debt — a currency-issuing government cannot run out of its own money. Yet the household analogy is deployed politically to justify cutting public services: we must live within our means, there is no magic money tree. This is an ideological choice, not an economic necessity. The same governments that said there was no money found trillions for bank bailouts and furlough schemes.",
+      relates: "No magic money tree — until there is"
+    },
+    {
+      id: "austerity_economics", type: "synthesis", color: "#18c97c",
+      label: "Austerity\nEconomics",
+      rx: .34, ry: .34, cluster: "II. National Debt & Austerity",
+      desc: "Austerity — cutting public spending to reduce deficits — is the synthesis of the debt weapon. The IMF, which imposed structural adjustment on the Global South for decades, eventually admitted austerity had been oversold and that fiscal multipliers were much larger than assumed. Austerity does not reduce debt — it shrinks the economy, reducing tax revenues, making the debt ratio worse. It succeeds not as economics but as class politics: dismantling public goods, disciplining labour.",
+      relates: "Austerity succeeds as class politics — not economics"
+    },
+
+    // ── III. Personal Debt ────────────────────────────────
+    {
+      id: "wage_stagnation", type: "thesis", color: "#00bcd4",
+      label: "Wage\nStagnation",
+      rx: .54, ry: .18, cluster: "III. Personal Debt",
+      desc: "Since the 1980s, productivity growth has decoupled from wage growth across the advanced economies. Workers produce more but take home a shrinking share. The gap between what workers produce and what they are paid has been filled not by higher wages but by cheaper credit — debt as a substitute for wages. Stagnant wages are not a market outcome but a political one: the result of deliberate union-busting, labour market deregulation, and the destruction of collective bargaining.",
+      relates: "Debt as a substitute for the wages that were taken"
+    },
+    {
+      id: "personal_debt_explosion", type: "antithesis", color: "#ff6b35",
+      label: "Personal\nDebt Explosion",
+      rx: .66, ry: .18, cluster: "III. Personal Debt",
+      desc: "Credit cards, payday loans, student loans, car finance, buy-now-pay-later, mortgage debt. Household debt in the UK stands at over 130% of household income. Personal debt disciplines workers in a way that low wages alone cannot — a debtor cannot strike, cannot quit, cannot organise. The indebted worker is the ideal neoliberal subject: productive, compliant, and paying interest to the financial sector for the privilege of surviving.",
+      relates: "Debt as a disciplinary mechanism — the indebted worker"
+    },
+    {
+      id: "debt_jubilee", type: "synthesis", color: "#18c97c",
+      label: "Debt Jubilee\n& Public Banking",
+      rx: .60, ry: .34, cluster: "III. Personal Debt",
+      desc: "David Graeber's Debt: the First 5000 Years — debt has always been a political relationship, not a natural one, and debt cancellation (jubilee) has historical precedent from Mesopotamia to the post-war German economic miracle. The synthesis: public banking, postal savings banks, credit unions, student debt cancellation, mortgage debt restructuring. Not charity but the recognition that most private debt is a transfer of wealth from the many to the financial sector.",
+      relates: "Graeber: debt is political — and can be cancelled"
+    },
+
+    // ── IV. Low Productivity Trap ─────────────────────────
+    {
+      id: "productivity_puzzle", type: "thesis", color: "#00bcd4",
+      label: "The\nProductivity\nPuzzle",
+      rx: .78, ry: .20, cluster: "IV. Low Productivity Trap",
+      desc: "Since 2008, UK productivity growth has been essentially flat — the longest stagnation since the Industrial Revolution. Output per hour worked has barely moved. The mainstream explanation puzzles over this: if labour markets are flexible and capital is mobile, why isn't productivity rising? The productivity puzzle is presented as a mystery. It is not a mystery — it is the predictable consequence of a low-wage, low-investment, financialised economy.",
+      relates: "Low productivity as the predictable result of neoliberalism"
+    },
+    {
+      id: "low_investment", type: "antithesis", color: "#ff6b35",
+      label: "Low\nInvestment",
+      rx: .90, ry: .20, cluster: "IV. Low Productivity Trap",
+      desc: "UK business investment as a share of GDP is among the lowest in the G7. Why invest in productivity-enhancing capital when cheap labour is available? Low wages make automation unprofitable — it is cheaper to hire another zero-hours worker than to buy a machine. The hostile environment policy, by creating a hyper-exploitable migrant labour pool, actively suppresses investment in labour-saving technology. Cheap labour is the enemy of productivity.",
+      relates: "Cheap labour makes investment unnecessary"
+    },
+    {
+      id: "investment_state", type: "synthesis", color: "#18c97c",
+      label: "The\nEntrepreneurial\nState",
+      rx: .84, ry: .36, cluster: "IV. Low Productivity Trap",
+      desc: "Mariana Mazzucato's The Entrepreneurial State: every technology in your iPhone was publicly funded — the internet, GPS, touchscreen, Siri. Private capital harvests innovation it did not create. The synthesis of low productivity is not more market but more state: public investment in R&D, green infrastructure, industrial strategy. Germany, South Korea, Japan — the high-productivity economies all have active industrial states. The market alone has never solved a productivity crisis.",
+      relates: "Mazzucato: public investment creates the innovation capital harvests"
+    },
+
+    // ── V. Modern Monetary Theory ─────────────────────────
+    {
+      id: "commodity_money_myth", type: "thesis", color: "#00bcd4",
+      label: "Commodity\nMoney Myth",
+      rx: .18, ry: .62, cluster: "V. Modern Monetary Theory",
+      desc: "The dominant folk theory of money: it is a commodity (gold, or backed by gold), governments must raise taxes or borrow before they can spend, and the national finances work like a household budget. This theory is wrong as a description of how modern fiat money actually works — but extremely useful as ideology, naturalising austerity as unavoidable and public spending as inherently constrained.",
+      relates: "The household budget analogy — wrong but useful"
+    },
+    {
+      id: "mmt", type: "antithesis", color: "#ff6b35",
+      label: "Modern\nMonetary\nTheory",
+      rx: .34, ry: .70, cluster: "V. Modern Monetary Theory",
+      desc: "MMT (Stephanie Kelton, Warren Mosler, Randall Wray): a currency-issuing sovereign government — like the UK, US or Japan — cannot run out of its own currency. It spends money into existence and taxes it back out. The real constraint on public spending is not money but real resources: labour, materials, productive capacity. When there are unemployed workers and idle capacity, deficit spending does not cause inflation — it puts resources to work. The question is never can we afford it — it is always do we have the real resources.",
+      relates: "The real constraint is resources — not money"
+    },
+    {
+      id: "green_new_deal", type: "synthesis", color: "#18c97c",
+      label: "Green New\nDeal & Job\nGuarantee",
+      rx: .24, ry: .84, cluster: "V. Modern Monetary Theory",
+      desc: "MMT's policy synthesis: a Job Guarantee — the state as employer of last resort, offering paid work to anyone who wants it, automatically stabilising the economy. Combined with a Green New Deal: public investment in the decarbonisation of the economy, funded not by raising taxes on workers or borrowing from bond markets but by the state spending its own currency into existence. The money was always there. It was always a political choice.",
+      relates: "The money was always there — it was always political"
+    },
+
+    // ── VI. Post-Industrial Politics ──────────────────────
+    {
+      id: "post_industrial_identity", type: "thesis", color: "#00bcd4",
+      label: "Post-Industrial\nIdentity",
+      rx: .62, ry: .62, cluster: "VI. Post-Industrial Politics",
+      desc: "Deindustrialisation destroyed not just jobs but the dense institutional culture of the industrial working class — the union branch, the working mens club, the brass band, the co-op, the Labour Party ward. The communities left behind are not merely economically deprived but culturally bereaved. The loss of collective identity produced a political vacuum that nationalism, nostalgia and populism have rushed to fill.",
+      relates: "Economic loss produces cultural bereavement"
+    },
+    {
+      id: "left_behind", type: "antithesis", color: "#ff6b35",
+      label: "The\n\"Left Behind\"",
+      rx: .78, ry: .70, cluster: "VI. Post-Industrial Politics",
+      desc: "The political discourse of the left-behind: post-industrial towns voting for Brexit, for Trump, for Farage — against the liberal metropolitan elite. The analysis is partially correct: these communities have been materially abandoned by decades of neoliberalism. But the left-behind framing obscures the class dynamics — directing anger at metropolitan liberals and migrants rather than at the capital and political class that made the abandonment.",
+      relates: "Real grievance — misdirected anger"
+    },
+    {
+      id: "post_industrial_politics", type: "synthesis", color: "#18c97c",
+      label: "Post-Industrial\nClass Politics",
+      rx: .70, ry: .84, cluster: "VI. Post-Industrial Politics",
+      desc: "The synthesis is neither nostalgic labourism nor liberal metropolitanism but a new post-industrial class politics: combining the material demands of MMT and the Green New Deal with the cultural recognition of deindustrialised communities, connecting the precariat with the remnants of industrial labour, and building the kind of broad working-class coalition that the neoliberal settlement has deliberately prevented. The Rochdale Pioneers did not mourn the passing of feudalism — they built something new.",
+      relates: "Not nostalgia — but building something new"
+    }
+
+  ],
+
+  edges: [
+    // I. Deindustrialisation chain
+    ["industrial_economy",       "service_sector"],
+    ["service_sector",           "knowledge_economy_myth"],
+
+    // II. Debt chain
+    ["keynesian_deficit",        "debt_as_weapon"],
+    ["debt_as_weapon",           "austerity_economics"],
+
+    // III. Personal debt chain
+    ["wage_stagnation",          "personal_debt_explosion"],
+    ["personal_debt_explosion",  "debt_jubilee"],
+
+    // IV. Productivity chain
+    ["productivity_puzzle",      "low_investment"],
+    ["low_investment",           "investment_state"],
+
+    // V. MMT chain
+    ["commodity_money_myth",     "mmt"],
+    ["mmt",                      "green_new_deal"],
+
+    // VI. Politics chain
+    ["post_industrial_identity", "left_behind"],
+    ["left_behind",              "post_industrial_politics"],
+
+    // ── Cross-cluster wiring ──────────────────────────────
+
+    // Deindustrialisation drives wage stagnation
+    ["service_sector",           "wage_stagnation"],
+
+    // Wage stagnation drives productivity puzzle (cheap labour = no investment)
+    ["wage_stagnation",          "low_investment"],
+
+    // Austerity drives personal debt (cut services, people borrow to survive)
+    ["austerity_economics",      "personal_debt_explosion"],
+
+    // Debt as weapon justification relies on commodity money myth
+    ["commodity_money_myth",     "debt_as_weapon"],
+
+    // MMT demolishes debt as weapon
+    ["mmt",                      "austerity_economics"],
+
+    // Entrepreneurial state solves low investment
+    ["investment_state",         "low_investment"],
+
+    // Green New Deal connects to investment state
+    ["investment_state",         "green_new_deal"],
+
+    // Deindustrialisation produces post-industrial identity
+    ["industrial_economy",       "post_industrial_identity"],
+
+    // Austerity produces left-behind communities
+    ["austerity_economics",      "left_behind"],
+
+    // Post-industrial class politics connects to Green New Deal
+    ["green_new_deal",           "post_industrial_politics"],
+
+    // Debt jubilee connects to post-industrial politics
+    ["debt_jubilee",             "post_industrial_politics"],
+
+    // Knowledge economy myth produces post-industrial identity
+    ["knowledge_economy_myth",   "post_industrial_identity"],
+
+    // Personal debt explosion feeds post-industrial identity (anxiety, resentment)
+    ["personal_debt_explosion",  "post_industrial_identity"]
+  ]
+};
