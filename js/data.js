@@ -1505,3 +1505,228 @@ DATA.postindustrial = {
     ["personal_debt_explosion",  "post_industrial_identity"]
   ]
 };
+
+// ══════════════════════════════════════════════════════════
+//  IX. FAUX DEMOCRACY & ELITE CONTROL
+//  The democratic myth and actually existing power —
+//  from the property franchise to colour revolutions
+// ══════════════════════════════════════════════════════════
+DATA.democracy = {
+  label: "Faux Democracy & Elite Control",
+  desc:  "Democracy is the legitimating ideology of capitalist states — but actually existing democracy has always been constrained, captured, or overthrown when it threatened elite interests. From the property franchise to the New Jim Crow, from Françafrique to colour revolutions, the pattern is consistent: democracy for the few, managed or removed for the many.",
+  accentColor: '#e91e63',
+  thesisColor: '#e91e63',
+
+  clusters: [
+    { label: "I. The Property Franchise",        x: .10,  y: .05 },
+    { label: "II. American Democracy & Race",     x: .34,  y: .05 },
+    { label: "III. Françafrique & Neo-colonialism", x: .60, y: .05 },
+    { label: "IV. Colour Revolutions & Regime Change", x: .84, y: .05 },
+    { label: "V. Corporate Capture",             x: .28,  y: .54 },
+    { label: "VI. Democracy from Below",         x: .72,  y: .54 }
+  ],
+
+  nodes: [
+
+    // ── I. The Property Franchise ─────────────────────────
+    {
+      id: "property_franchise", type: "thesis", color: "#e91e63",
+      label: "The Property\nFranchise",
+      rx: .06, ry: .18, cluster: "I. The Property Franchise",
+      desc: "In Britain before 1832, only men owning property worth forty shillings or more could vote — roughly 3% of the population. Parliament was the instrument of the landed gentry: rotten boroughs with no voters returning members, while industrial Manchester had none. The Great Reform Act extended the franchise slightly — but explicitly to exclude the working class. Democracy as the exclusive property of property.",
+      relates: "Democracy invented for — and by — those with property to protect"
+    },
+    {
+      id: "suffrage_struggle", type: "antithesis", color: "#ff6b35",
+      label: "Suffrage\nStruggle",
+      rx: .17, ry: .18, cluster: "I. The Property Franchise",
+      desc: "The Chartists demanded universal male suffrage, secret ballot, and annual parliaments — six points that terrified the ruling class precisely because they were moderate and unanswerable. The Suffragettes, arrested, force-fed, and dismissed as hysteria, demanded that democracy mean what it claimed. Each extension of the franchise was won by organised pressure from below and granted reluctantly from above — always too little, always too late.",
+      relates: "Every extension of democracy was won from below — never given"
+    },
+    {
+      id: "managed_democracy_uk", type: "synthesis", color: "#18c97c",
+      label: "Managed\nDemocracy",
+      rx: .115, ry: .34, cluster: "I. The Property Franchise",
+      desc: "Universal suffrage arrived — but inside a system designed to manage its consequences. First Past the Post produces parliaments that misrepresent voters. The Lords veto elected legislation. The monarchy provides ideological continuity above democratic challenge. The press — owned by a handful of billionaires — sets the terms of political debate. The BBC manages the Overton window. Democracy formally universal, substantively managed.",
+      relates: "The franchise won — but the system absorbs and manages it"
+    },
+
+    // ── II. American Democracy & Race ─────────────────────
+    {
+      id: "founding_myth", type: "thesis", color: "#e91e63",
+      label: "The Founding\nMyth",
+      rx: .28, ry: .18, cluster: "II. American Democracy & Race",
+      desc: "All men are created equal — the Declaration of Independence, 1776. The shining city on a hill. The world's oldest democracy. The land of liberty. The founding myth of American democracy is among the most powerful ideological constructions in history — and was written by slaveholders, for slaveholders, explicitly excluding women, indigenous peoples, and the enslaved. The contradiction was not incidental — it was constitutional.",
+      relates: "Democracy declared by slaveholders — for slaveholders"
+    },
+    {
+      id: "jim_crow", type: "antithesis", color: "#ff6b35",
+      label: "Jim Crow &\nThe New Jim Crow",
+      rx: .40, ry: .18, cluster: "II. American Democracy & Race",
+      desc: "After Reconstruction, Jim Crow laws systematically disenfranchised Black Americans through poll taxes, literacy tests, grandfather clauses, and terrorist violence. The Voting Rights Act (1965) was won in blood — and has been systematically dismantled since the Supreme Court's Shelby County decision (2013). Michelle Alexander's The New Jim Crow: mass incarceration is the successor system — felony disenfranchisement, racialised policing, prison labour. The system evolved; the exclusion continues.",
+      relates: "The New Jim Crow — disenfranchisement by other means"
+    },
+    {
+      id: "dollar_democracy", type: "synthesis", color: "#18c97c",
+      label: "Dollar\nDemocracy",
+      rx: .34, ry: .34, cluster: "II. American Democracy & Race",
+      desc: "Citizens United (2010): the Supreme Court ruled that corporate political spending is free speech — unlimited dark money in elections. The US Senate is a millionaires' club; the cost of a Senate seat averages $10 million. Princeton's Gilens and Page study (2014): US policy outcomes correlate strongly with elite preferences and weakly with public opinion. America is, empirically, an oligarchy with democratic characteristics — not a democracy with oligarchic tendencies.",
+      relates: "Gilens & Page: America is an oligarchy — empirically"
+    },
+
+    // ── III. Françafrique ─────────────────────────────────
+    {
+      id: "formal_decolonisation", type: "thesis", color: "#e91e63",
+      label: "Formal\nDecolonisation",
+      rx: .54, ry: .18, cluster: "III. Françafrique & Neo-colonialism",
+      desc: "The flag comes down, the anthem plays, the new president takes office. Between 1956 and 1966, most of Africa achieved formal independence from European colonial powers. Self-determination, sovereignty, democracy — the promises of decolonisation. France granted independence to seventeen African nations in 1960 alone. The formal transfer of power was real. The informal retention of power was equally real.",
+      relates: "Independence on paper — dependence in practice"
+    },
+    {
+      id: "francafrique", type: "antithesis", color: "#ff6b35",
+      label: "Françafrique",
+      rx: .66, ry: .18, cluster: "III. Françafrique & Neo-colonialism",
+      desc: "The system devised by Jacques Foccart: France maintained control of its former colonies through a network of personal relationships between French presidents and African heads of state, French military bases, the CFA franc (a currency controlled by the French Treasury), French corporations holding resource extraction monopolies, and direct intervention — fourteen French military interventions in Africa since 1960. Lumumba, assassinated with Belgian and CIA involvement. Sankara, killed in a coup with French foreknowledge. Gaddafi, destroyed partly to prevent a gold-backed African currency.",
+      relates: "Fourteen military interventions since independence"
+    },
+    {
+      id: "africa_rising", type: "synthesis", color: "#18c97c",
+      label: "Pan-African\nSovereignty",
+      rx: .60, ry: .34, cluster: "III. Françafrique & Neo-colonialism",
+      desc: "The Sahel coups of 2021-2023 — Mali, Burkina Faso, Niger — expelled French forces and the Wagner group moved in. Whether this represents genuine sovereignty or a change of patron remains contested. But the pan-African movement from Nkrumah to the African Union's push for a single currency and free movement area represents the ongoing struggle for the material content of the formal independence that was granted. The contradiction between the form of sovereignty and its substance drives history forward.",
+      relates: "The Sahel turns — the contradiction between form and content"
+    },
+
+    // ── IV. Colour Revolutions & Regime Change ────────────
+    {
+      id: "democracy_promotion", type: "thesis", color: "#e91e63",
+      label: "Democracy\nPromotion",
+      rx: .78, ry: .18, cluster: "IV. Colour Revolutions & Regime Change",
+      desc: "The National Endowment for Democracy, USAID, the Open Society Foundations, the British Council — a network of institutions funding civil society, media, and political organisations in countries whose governments are unfriendly to Western interests. Presented as democracy promotion: supporting free press, civil society, fair elections. The recipients of funding are not randomly selected — they correlate strongly with strategic and resource interests.",
+      relates: "Democracy promotion as geopolitical instrument"
+    },
+    {
+      id: "colour_revolutions", type: "antithesis", color: "#ff6b35",
+      label: "Colour\nRevolutions",
+      rx: .90, ry: .18, cluster: "IV. Colour Revolutions & Regime Change",
+      desc: "Rose Revolution (Georgia 2003), Orange Revolution (Ukraine 2004), Tulip Revolution (Kyrgyzstan 2005), Arab Spring (2010-11). Genuine popular grievances, Western-funded opposition infrastructure, and geopolitical timing combine to produce regime change that installs governments aligned with Western interests. Where colour revolutions fail — Venezuela, Bolivia, Belarus — sanctions, coup attempts, and economic warfare follow. Democracy is supported where it produces the right result.",
+      relates: "Democracy supported where it produces the right result"
+    },
+    {
+      id: "regime_change", type: "synthesis", color: "#18c97c",
+      label: "Sovereign\nDemocracy",
+      rx: .84, ry: .34, cluster: "IV. Colour Revolutions & Regime Change",
+      desc: "The backlash to colour revolutions: Russia's concept of sovereign democracy, China's whole-process democracy, the Non-Aligned Movement's assertion that democracy cannot be externally imposed. Flawed as these alternatives often are, they contain a genuine insight: democracy promoted at gunpoint or through foreign funding is not democracy but a new form of colonial administration. The synthesis demands democracy that is genuinely self-determined — which requires freedom from economic coercion as well as military threat.",
+      relates: "Democracy cannot be imposed — it must be self-determined"
+    },
+
+    // ── V. Corporate Capture of Democracy ────────────────
+    {
+      id: "electoral_democracy", type: "thesis", color: "#e91e63",
+      label: "Electoral\nDemocracy",
+      rx: .18, ry: .62, cluster: "V. Corporate Capture",
+      desc: "The formal machinery of democracy: elections, parties, parliaments, constitutions, rights of assembly and speech. These are real gains — won by real struggle — and their absence is acutely felt. But formal electoral democracy systematically produces governments that implement policies opposed by majorities: privatisation, austerity, arms exports, tax cuts for the wealthy. The gap between election promises and governing practice is not accidental — it is structural.",
+      relates: "Formal democracy — real capture"
+    },
+    {
+      id: "corporate_capture", type: "antithesis", color: "#ff6b35",
+      label: "Corporate\nCapture",
+      rx: .34, ry: .70, cluster: "V. Corporate Capture",
+      desc: "The revolving door between government and industry. Lobbying: in the US, $3.7 billion spent annually. Think tanks funded by fossil fuel, pharmaceutical, and financial interests shaping policy agendas. The capture of regulatory agencies by the industries they regulate. Political parties dependent on donor funding that constrains their programmes. The result: formally democratic states that systematically implement the preferences of concentrated economic power over the preferences of their electorates.",
+      relates: "Three billion dollars of lobbying — one direction of policy"
+    },
+    {
+      id: "participatory_democracy", type: "synthesis", color: "#18c97c",
+      label: "Participatory\n& Economic\nDemocracy",
+      rx: .24, ry: .84, cluster: "V. Corporate Capture",
+      desc: "The synthesis of corporate capture is not better regulation of lobbying but a transformation of the economic base that makes capture possible. Workers on boards (Germany's Mitbestimmung), participatory budgeting (Porto Alegre), cooperatives and mutual ownership, Citizens' Assemblies (Ireland's abortion referendum), liquid democracy. Economic democracy as the condition of political democracy — you cannot have one without the other. The Rochdale Pioneers understood this in 1844.",
+      relates: "Economic democracy as the condition of political democracy"
+    },
+
+    // ── VI. Democracy from Below ──────────────────────────
+    {
+      id: "commune_tradition", type: "thesis", color: "#e91e63",
+      label: "The Commune\nTradition",
+      rx: .62, ry: .62, cluster: "VI. Democracy from Below",
+      desc: "The Paris Commune (1871): seventy-two days of genuine working-class self-government — delegates instantly recallable, paid workers' wages, separation of church and state, women in public life. Marx called it the political form at last discovered for the emancipation of labour. The Soviets of 1917, before their capture by the party. The Spanish anarchist collectives of 1936. The Zapatista autonomous municipalities. Workers' councils in Hungary 1956. The tradition of democracy from below — not representation but self-governance.",
+      relates: "Marx on the Commune: the form of emancipation discovered"
+    },
+    {
+      id: "democratic_suppression", type: "antithesis", color: "#ff6b35",
+      label: "Democratic\nSuppression",
+      rx: .78, ry: .70, cluster: "VI. Democracy from Below",
+      desc: "Every experiment in genuine popular democracy has been suppressed, often violently. The Paris Commune drowned in blood — 30,000 killed in the Bloody Week. The Spanish collectives crushed by Franco with Nazi and fascist support. Allende's democratic socialism ended by Pinochet's coup, with CIA backing, on 11 September 1973. Mosaddegh's democratic Iran, overthrown by CIA and MI6 in 1953 to restore oil concessions. The pattern is consistent: genuine democracy that threatens elite economic interests is crushed.",
+      relates: "Every genuine democracy that threatened capital was crushed"
+    },
+    {
+      id: "democracy_to_come", type: "synthesis", color: "#18c97c",
+      label: "Democracy\nTo Come",
+      rx: .70, ry: .84, cluster: "VI. Democracy from Below",
+      desc: "Derrida's democracy to come: democracy not as a achieved state but as an infinite promise — always arriving, never fully present, always exceeding its current instantiation. The practical content: extending democracy from the political to the economic sphere, from the nation state to the global, from representation to participation, from periodic voting to ongoing self-governance. Not utopian — but the recognition that every existing democracy is a partial, contested, and reversible achievement of struggle from below.",
+      relates: "Democracy not as destination but as permanent process of struggle"
+    }
+
+  ],
+
+  edges: [
+    // I. Property franchise chain
+    ["property_franchise",    "suffrage_struggle"],
+    ["suffrage_struggle",     "managed_democracy_uk"],
+    ["managed_democracy_uk",  "property_franchise"],  // managed democracy recreates elite control
+
+    // II. American democracy chain
+    ["founding_myth",         "jim_crow"],
+    ["jim_crow",              "dollar_democracy"],
+
+    // III. Françafrique chain
+    ["formal_decolonisation", "francafrique"],
+    ["francafrique",          "africa_rising"],
+
+    // IV. Colour revolution chain
+    ["democracy_promotion",   "colour_revolutions"],
+    ["colour_revolutions",    "regime_change"],
+
+    // V. Corporate capture chain
+    ["electoral_democracy",   "corporate_capture"],
+    ["corporate_capture",     "participatory_democracy"],
+
+    // VI. Democracy from below chain
+    ["commune_tradition",     "democratic_suppression"],
+    ["democratic_suppression","democracy_to_come"],
+
+    // ── Cross-cluster wiring ──────────────────────────────
+
+    // Managed democracy enables corporate capture
+    ["managed_democracy_uk",  "corporate_capture"],
+
+    // Dollar democracy is corporate capture in its purest form
+    ["dollar_democracy",      "corporate_capture"],
+
+    // Jim Crow connects to democracy promotion (selective application)
+    ["jim_crow",              "democracy_promotion"],
+
+    // Françafrique is regime change by another name
+    ["francafrique",          "colour_revolutions"],
+
+    // Democratic suppression connects to colour revolutions
+    ["democratic_suppression","colour_revolutions"],
+
+    // Commune tradition feeds participatory democracy
+    ["commune_tradition",     "participatory_democracy"],
+
+    // Democracy to come connects to participatory democracy
+    ["democracy_to_come",     "participatory_democracy"],
+
+    // Africa rising connects to sovereign democracy
+    ["africa_rising",         "regime_change"],
+
+    // Suffrage struggle connects to commune tradition
+    ["suffrage_struggle",     "commune_tradition"],
+
+    // Property franchise connects to founding myth
+    ["property_franchise",    "founding_myth"],
+
+    // Corporate capture suppresses democracy from below
+    ["corporate_capture",     "democratic_suppression"]
+  ]
+};
