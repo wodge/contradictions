@@ -35,10 +35,13 @@ html, body {
   inset: 0;
   z-index: 100;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: var(--bg);
   transition: opacity .7s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px 0 60px;
 }
 #intro.fade-out {
   opacity: 0;
@@ -98,10 +101,8 @@ html, body {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 860px;
+  max-width: 1100px;
   padding: 0 24px;
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 #intro-eyebrow {
@@ -155,13 +156,16 @@ html, body {
 
 /* ── Intro cards ── */
 #intro-cards {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-bottom: 30px;
   animation: fadeInUp .8s ease both;
   animation-delay: 1.3s;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icard {
@@ -169,8 +173,8 @@ html, body {
   border: 1px solid rgba(255,255,255,.08);
   border-top: 2px solid transparent;
   border-radius: 3px;
-  padding: 22px 20px 18px;
-  width: clamp(170px, 23vw, 230px);
+  padding: 18px 16px 16px;
+  width: clamp(160px, 18vw, 210px);
   text-align: left;
   cursor: pointer;
   transition: background .3s, border-color .3s, transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
@@ -674,8 +678,7 @@ canvas {
 
   /* Cards stack vertically, full width */
   #intro-cards {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 18px;
   }
@@ -826,8 +829,11 @@ canvas {
     justify-content: center;
   }
 
+  #intro-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .icard {
-    width: clamp(180px, 40vw, 260px);
+    width: 100%;
   }
 
   .tab { font-size: .62rem; padding: 6px 10px 4px; }
