@@ -209,3 +209,14 @@
   });
 
 })();
+
+// ── CC licence tab toggle ─────────────────────────────────
+(function () {
+  var btn  = document.getElementById('cc-tab');
+  var panel= document.getElementById('footer-cc-text');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', function () {
+    var open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
