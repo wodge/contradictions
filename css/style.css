@@ -845,185 +845,132 @@ canvas {
 }
 
 /* ══════════════════════════════════════════════════════════
-   FOOTER
+   HERITAGE HACKERS SLIDE PANEL (fixed, right side)
 ══════════════════════════════════════════════════════════ */
-#site-footer {
-  margin-top: 48px;
-  border-top: 1px solid rgba(255,107,53,.2);
-  padding: 32px 24px 40px;
-  position: relative;
-  z-index: 2;
-}
-
-#footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#footer-logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  transition: transform .3s cubic-bezier(.34,1.56,.64,1);
-}
-#footer-logo:hover {
-  transform: rotate(20deg) scale(1.08);
-}
-#footer-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .85;
-  display: block;
-  transition: opacity .3s;
-}
-#footer-logo:hover img {
-  opacity: 1;
-}
-
-#footer-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-  flex: 1;
-  min-width: 260px;
-}
-
-#footer-quote {
-  font-family: 'Crimson Text', Georgia, serif;
-  font-style: italic;
-  font-size: clamp(.85rem, 1.4vw, 1.05rem);
-  line-height: 1.6;
-  color: rgba(220,232,252,.8);
-  border-left: 2px solid #ff6b35;
-  padding-left: 14px;
-  margin: 0;
-}
-
-#footer-credit {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Cinzel', serif;
-  font-size: .68rem;
-  letter-spacing: .1em;
-  color: rgba(220,232,252,.5);
-  flex-wrap: wrap;
-}
-
-#footer-sep { opacity: .35; }
-
-#footer-licence {
-  display: flex;
-  align-items: center;
-  opacity: .7;
-  transition: opacity .2s;
-  text-decoration: none;
-}
-#footer-licence:hover { opacity: 1; }
-
-#footer-cc-text {
-  font-size: .72rem;
-  font-style: italic;
-  color: rgba(220,232,252,.45);
-  line-height: 1.5;
-}
-#footer-cc-text a {
-  color: #ff6b35;
-  opacity: .7;
-  text-decoration: none;
-  transition: opacity .2s;
-}
-#footer-cc-text a:hover { opacity: 1; }
-
-/* ══ Footer drawer ══════════════════════════════════════ */
-
-/* The trigger tab — always visible at bottom of intro */
-#footer-tab {
-  position: sticky;
-  bottom: 0;
-  left: 0;
+#hh-panel {
+  position: fixed;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
+  z-index: 200;
   display: flex;
-  justify-content: center;
-  z-index: 10;
-  margin-top: 24px;
+  align-items: stretch;
 }
 
-#footer-tab-btn {
+/* The visible tab on the right edge */
+#hh-tab {
+  width: 36px;
+  background: rgba(10,14,24,.88);
+  border: 1px solid rgba(255,107,53,.35);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(10,14,24,.92);
-  border: 1px solid rgba(255,107,53,.3);
-  border-bottom: none;
-  border-radius: 12px 12px 0 0;
-  padding: 6px 18px 6px 10px;
+  justify-content: center;
   cursor: pointer;
-  color: rgba(220,232,252,.7);
-  font-family: "Cinzel", serif;
-  font-size: .68rem;
-  letter-spacing: .1em;
-  backdrop-filter: blur(12px);
-  transition: background .2s, color .2s, border-color .2s;
+  padding: 10px 6px;
+  transition: background .25s, border-color .25s;
+  flex-shrink: 0;
 }
-#footer-tab-btn:hover {
-  background: rgba(255,107,53,.12);
-  border-color: rgba(255,107,53,.6);
-  color: #ff6b35;
+#hh-panel:hover #hh-tab,
+#hh-panel:focus-within #hh-tab {
+  background: rgba(255,107,53,.15);
+  border-color: rgba(255,107,53,.7);
 }
 
-#footer-tab-logo {
-  width: 22px;
-  height: 22px;
+#hh-tab-logo {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   object-fit: cover;
-  opacity: .8;
+  opacity: .7;
+  transition: opacity .25s, transform .4s cubic-bezier(.34,1.56,.64,1);
 }
-
-#footer-tab-chevron {
-  font-size: .65rem;
-  color: #ff6b35;
-  transition: transform .35s ease;
-  display: inline-block;
-  margin-left: 2px;
-}
-#footer-tab-btn[aria-expanded="true"] #footer-tab-chevron {
+#hh-panel:hover #hh-tab-logo {
+  opacity: 1;
   transform: rotate(180deg);
 }
 
-/* The footer panel itself — slides up */
-#site-footer {
+/* The slide-out content panel */
+#hh-content {
+  width: 0;
   overflow: hidden;
-  max-height: 0;
+  background: rgba(6,8,18,.96);
+  border: 1px solid rgba(255,107,53,.25);
+  border-right: none;
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  transition: width .4s cubic-bezier(.4,0,.2,1), padding .4s ease, opacity .3s ease;
   opacity: 0;
-  transition: max-height .45s ease, opacity .35s ease;
-  margin-top: 0;
-  border-top: 1px solid rgba(255,107,53,.2);
-  padding: 0 24px;
 }
-#site-footer.open {
-  max-height: 300px;
+#hh-panel:hover #hh-content,
+#hh-panel:focus-within #hh-content {
+  width: 260px;
+  padding: 20px 18px;
   opacity: 1;
-  padding: 28px 24px 36px;
+}
+
+#hh-logo-big {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0 auto;
+  transition: transform .4s cubic-bezier(.34,1.56,.64,1);
+}
+#hh-panel:hover #hh-logo-big {
+  transform: rotate(20deg) scale(1.05);
+}
+#hh-logo-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#hh-quote {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-style: italic;
+  font-size: .82rem;
+  line-height: 1.65;
+  color: rgba(220,232,252,.82);
+  border-left: 2px solid #ff6b35;
+  padding-left: 10px;
+  margin: 0;
+  white-space: normal;
+}
+
+#hh-credit {
+  font-family: 'Cinzel', serif;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  color: rgba(220,232,252,.45);
+  white-space: nowrap;
+}
+
+#hh-licence {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  opacity: .65;
+  transition: opacity .2s;
+}
+#hh-licence:hover { opacity: 1; }
+#hh-licence span {
+  font-size: .65rem;
+  font-style: italic;
+  color: rgba(220,232,252,.5);
+  line-height: 1.4;
+  white-space: normal;
 }
 
 @media (max-width: 640px) {
-  #footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-  #footer-text { text-align: center; min-width: unset; }
-  #footer-quote { border-left: none; border-top: 2px solid #ff6b35; padding-left: 0; padding-top: 12px; }
-  #footer-credit { justify-content: center; }
+  #hh-panel { top: auto; bottom: 80px; transform: none; }
+  #hh-panel:hover #hh-content,
+  #hh-panel:focus-within #hh-content { width: 220px; }
 }

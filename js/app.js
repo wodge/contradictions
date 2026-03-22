@@ -210,13 +210,4 @@
 
 })();
 
-// ── Footer drawer toggle ─────────────────────────────────
-(function () {
-  var btn    = document.getElementById('footer-tab-btn');
-  var drawer = document.getElementById('site-footer');
-  if (!btn || !drawer) return;
-  btn.addEventListener('click', function () {
-    var open = drawer.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-})();
+// ── Heritage Hackers panel: CSS hover only, no JS needed ──
