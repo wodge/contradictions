@@ -921,54 +921,100 @@ canvas {
 
 #footer-sep { opacity: .35; }
 
-/* ── CC toggle tab ── */
-#cc-tab {
+#footer-licence {
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 2px 4px;
-  opacity: .65;
+  opacity: .7;
   transition: opacity .2s;
+  text-decoration: none;
 }
-#cc-tab:hover { opacity: 1; }
+#footer-licence:hover { opacity: 1; }
 
-#cc-chevron {
-  font-size: .7rem;
-  color: #ff6b35;
-  transition: transform .3s ease;
-  display: inline-block;
-}
-#cc-tab[aria-expanded="true"] #cc-chevron {
-  transform: rotate(180deg);
-}
-
-/* ── CC slide panel ── */
 #footer-cc-text {
   font-size: .72rem;
   font-style: italic;
-  color: rgba(220,232,252,.55);
-  line-height: 1.6;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height .4s ease, opacity .3s ease, margin .3s ease;
-  margin-top: 0;
-}
-#footer-cc-text.open {
-  max-height: 80px;
-  opacity: 1;
-  margin-top: 6px;
+  color: rgba(220,232,252,.45);
+  line-height: 1.5;
 }
 #footer-cc-text a {
   color: #ff6b35;
-  opacity: .8;
+  opacity: .7;
   text-decoration: none;
   transition: opacity .2s;
 }
 #footer-cc-text a:hover { opacity: 1; }
+
+/* ══ Footer drawer ══════════════════════════════════════ */
+
+/* The trigger tab — always visible at bottom of intro */
+#footer-tab {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  margin-top: 24px;
+}
+
+#footer-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10,14,24,.92);
+  border: 1px solid rgba(255,107,53,.3);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 6px 18px 6px 10px;
+  cursor: pointer;
+  color: rgba(220,232,252,.7);
+  font-family: "Cinzel", serif;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  backdrop-filter: blur(12px);
+  transition: background .2s, color .2s, border-color .2s;
+}
+#footer-tab-btn:hover {
+  background: rgba(255,107,53,.12);
+  border-color: rgba(255,107,53,.6);
+  color: #ff6b35;
+}
+
+#footer-tab-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: .8;
+}
+
+#footer-tab-chevron {
+  font-size: .65rem;
+  color: #ff6b35;
+  transition: transform .35s ease;
+  display: inline-block;
+  margin-left: 2px;
+}
+#footer-tab-btn[aria-expanded="true"] #footer-tab-chevron {
+  transform: rotate(180deg);
+}
+
+/* The footer panel itself — slides up */
+#site-footer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .45s ease, opacity .35s ease;
+  margin-top: 0;
+  border-top: 1px solid rgba(255,107,53,.2);
+  padding: 0 24px;
+}
+#site-footer.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 28px 24px 36px;
+}
 
 @media (max-width: 640px) {
   #footer-inner {

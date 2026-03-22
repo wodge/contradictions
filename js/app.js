@@ -210,13 +210,13 @@
 
 })();
 
-// ── CC licence tab toggle ─────────────────────────────────
+// ── Footer drawer toggle ─────────────────────────────────
 (function () {
-  var btn  = document.getElementById('cc-tab');
-  var panel= document.getElementById('footer-cc-text');
-  if (!btn || !panel) return;
+  var btn    = document.getElementById('footer-tab-btn');
+  var drawer = document.getElementById('site-footer');
+  if (!btn || !drawer) return;
   btn.addEventListener('click', function () {
-    var open = panel.classList.toggle('open');
+    var open = drawer.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 })();
