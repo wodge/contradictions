@@ -865,17 +865,27 @@ canvas {
   justify-content: center;
 }
 
-#footer-logo img {
+#footer-logo {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  opacity: .85;
-  transition: opacity .3s, transform .3s cubic-bezier(.34,1.56,.64,1);
+  overflow: hidden;
   flex-shrink: 0;
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1);
 }
-#footer-logo img:hover {
-  opacity: 1;
+#footer-logo:hover {
   transform: rotate(20deg) scale(1.08);
+}
+#footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .85;
+  display: block;
+  transition: opacity .3s;
+}
+#footer-logo:hover img {
+  opacity: 1;
 }
 
 #footer-text {
