@@ -1730,3 +1730,1304 @@ DATA.democracy = {
     ["corporate_capture",     "democratic_suppression"]
   ]
 };
+
+// ══════════════════════════════════════════════════════════
+//  IX. TECHNOLOGY, AI & LABOUR
+// ══════════════════════════════════════════════════════════
+DATA.technology = {
+  label: "Technology, AI & Labour",
+  desc:  "Technology is never neutral — it is always developed within specific class relations and deployed in the interests of capital. Automation displaces labour; AI encloses knowledge; platform capitalism creates new forms of extraction. But technology also contains the seeds of abundance, free time, and liberation — if the question of ownership is answered differently.",
+  accentColor: '#00e676',
+  thesisColor: '#00e676',
+
+  clusters: [
+    { label: "I. Automation & Labour",         x: .10,  y: .05 },
+    { label: "II. Platform Capitalism",         x: .34,  y: .05 },
+    { label: "III. AI & Knowledge Enclosure",   x: .60,  y: .05 },
+    { label: "IV. Digital Commons",             x: .84,  y: .05 },
+    { label: "V. The Future of Work",           x: .28,  y: .54 },
+    { label: "VI. Tech & Democracy",            x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. Automation & Labour
+    {
+      id: "tech_productive_promise", type: "thesis", color: "#00e676",
+      label: "Technology\nas Liberation",
+      rx: .06, ry: .18, cluster: "I. Automation & Labour",
+      desc: "The promise of automation: machines do the drudgery, humans are freed for creativity, care, and self-development. Marx in the Grundrisse envisioned the machine displacing necessary labour and expanding free time — the general intellect transforming the basis of production. Keynes in 1930 predicted fifteen-hour working weeks by 2030. The technology to achieve this exists. The question is who owns it and who benefits.",
+      relates: "Marx's general intellect — technology as potential liberation"
+    },
+    {
+      id: "automation_displacement", type: "antithesis", color: "#ff6b35",
+      label: "Automation\nDisplacement",
+      rx: .17, ry: .18, cluster: "I. Automation & Labour",
+      desc: "When capital owns the machines, automation means unemployment, not free time. The Oxford Martin School study (2013) estimated 47% of US jobs at high risk of automation within twenty years. Manufacturing, logistics, data entry, customer service — entire occupational categories hollowed out. The gains from automation flow to capital owners; the costs fall on displaced workers. The promise of liberation becomes the reality of precarity.",
+      relates: "Automation without ownership change means unemployment not liberation"
+    },
+    {
+      id: "tech_universal_basic", type: "synthesis", color: "#18c97c",
+      label: "Universal\nBasic Income\nor Services",
+      rx: .115, ry: .34, cluster: "I. Automation & Labour",
+      desc: "Two responses to automation displacement: Universal Basic Income (a floor of income for all, regardless of work) or Universal Basic Services (free healthcare, housing, transport, education — decommodified provision). UBI risks becoming a Trojan horse for dismantling public services if pitched too low; UBS builds on the welfare state tradition. Both share the insight that socially produced technological wealth should be socially distributed — not privately accumulated.",
+      relates: "Socially produced wealth — socially distributed"
+    },
+
+    // II. Platform Capitalism
+    {
+      id: "sharing_economy_promise", type: "thesis", color: "#00e676",
+      label: "Sharing\nEconomy",
+      rx: .28, ry: .18, cluster: "II. Platform Capitalism",
+      desc: "Uber, Airbnb, TaskRabbit — the sharing economy promised peer-to-peer exchange, flexible work, unused assets put to productive use. A decentralised, democratic economic form enabled by digital technology. The reality: platforms are not peer-to-peer but hub-and-spoke monopolies. The platform owns nothing, extracts a rent from every transaction, and externalises all costs and risks onto workers and communities.",
+      relates: "Peer-to-peer promise — monopoly extraction reality"
+    },
+    {
+      id: "platform_monopoly", type: "antithesis", color: "#ff6b35",
+      label: "Platform\nMonopoly",
+      rx: .40, ry: .18, cluster: "II. Platform Capitalism",
+      desc: "Network effects produce natural monopolies: the platform with the most users is most valuable to new users, locking out competition. Amazon, Google, Meta, Apple — five companies with a combined market capitalisation exceeding the GDP of most countries, controlling the digital infrastructure of global commerce, communication, and information. Platform monopolies are the 21st century Standard Oil — but extracting data rent, not oil rent.",
+      relates: "Network effects produce monopoly — data is the new oil"
+    },
+    {
+      id: "platform_cooperativism", type: "synthesis", color: "#18c97c",
+      label: "Platform\nCooperativism",
+      rx: .34, ry: .34, cluster: "II. Platform Capitalism",
+      desc: "Trebor Scholz's platform cooperativism: build the platforms as worker and user cooperatives. Up&Go (cleaning workers cooperative), Stocksy (photographer cooperative), drivers cooperatives competing with Uber. The digital infrastructure of the platform economy could be owned by those who use and build it — the Rochdale Pioneers principle applied to the app store. The synthesis: democratic ownership of the digital means of production.",
+      relates: "The Pioneers' principle applied to the app store"
+    },
+
+    // III. AI & Knowledge Enclosure
+    {
+      id: "knowledge_commons_ai", type: "thesis", color: "#00e676",
+      label: "Knowledge\nas Commons",
+      rx: .54, ry: .18, cluster: "III. AI & Knowledge Enclosure",
+      desc: "Human knowledge — accumulated over millennia, expressed in books, art, code, science, conversation — is a collective inheritance. The internet made this commons globally accessible for the first time in history. Wikipedia, open-source software, Creative Commons, the open access movement — the knowledge commons in practice. The raw material from which AI systems are trained is this collective inheritance.",
+      relates: "Millennia of collective knowledge — the training data of AI"
+    },
+    {
+      id: "ai_enclosure", type: "antithesis", color: "#ff6b35",
+      label: "AI Enclosure\nof Knowledge",
+      rx: .66, ry: .18, cluster: "III. AI & Knowledge Enclosure",
+      desc: "Large language models trained on the collective commons of human knowledge are enclosed as private property by OpenAI, Google, Anthropic, Meta. Writers, artists, coders, academics whose work formed the training data receive nothing. The output — a system that commodifies collective intelligence — is sold back to the public that produced it. The most ambitious enclosure in history: the privatisation of the general intellect itself.",
+      relates: "Collective intelligence enclosed — sold back as a subscription"
+    },
+    {
+      id: "open_ai_movement", type: "synthesis", color: "#18c97c",
+      label: "Open Source\nAI & Data\nSovereignty",
+      rx: .60, ry: .34, cluster: "III. AI & Knowledge Enclosure",
+      desc: "The open source AI movement — Llama, Mistral, Stable Diffusion — resists enclosure through open weights and open training data. Data cooperatives where communities own and control their own data. Public AI infrastructure funded as public good. The synthesis: AI developed as public utility, trained on consensually contributed data, governed democratically, serving collective rather than private ends. The question of AI is the question of ownership.",
+      relates: "AI as public utility — the question is always ownership"
+    },
+
+    // IV. Digital Commons
+    {
+      id: "open_source", type: "thesis", color: "#00e676",
+      label: "Open Source\n& Free Software",
+      rx: .78, ry: .18, cluster: "IV. Digital Commons",
+      desc: "Richard Stallman's GNU, Linus Torvalds' Linux, the Apache Foundation, Mozilla, Wikipedia — the open source and free software movement built the infrastructure of the internet as a commons. Linux runs 96% of the world's servers. The Apache web server powers half the internet. These were built through voluntary collective labour, shared freely, and improved by millions. A proof of concept: commons-based production works at global scale.",
+      relates: "The internet's infrastructure built as commons"
+    },
+    {
+      id: "digital_enclosure_ii", type: "antithesis", color: "#ff6b35",
+      label: "Digital\nEnclosure",
+      rx: .90, ry: .18, cluster: "IV. Digital Commons",
+      desc: "The commons built by open source becomes the foundation on which platform monopolies erect their enclosures. Amazon Web Services runs on Linux but charges rent for access. Google's search is built on academic open PageRank research — the results are sold to advertisers. The digital commons is not protected by its openness — capital can always build enclosures on top of open foundations and extract rent from the traffic.",
+      relates: "Open foundations — enclosed superstructure"
+    },
+    {
+      id: "digital_commons_future", type: "synthesis", color: "#18c97c",
+      label: "Digital Public\nInfrastructure",
+      rx: .84, ry: .34, cluster: "IV. Digital Commons",
+      desc: "The synthesis: digital public infrastructure owned and governed as a public utility. A public social media platform with democratic governance. Public cloud computing not subject to shareholder extraction. Municipal broadband. Open standards enforced by regulation. The European Commons approach, the Indian digital public goods stack — models for treating digital infrastructure as the roads and utilities of the 21st century rather than private property.",
+      relates: "Digital infrastructure as 21st century public utility"
+    },
+
+    // V. The Future of Work
+    {
+      id: "work_ethic", type: "thesis", color: "#00e676",
+      label: "The\nWork Ethic",
+      rx: .18, ry: .62, cluster: "V. The Future of Work",
+      desc: "Max Weber's Protestant work ethic: the ideology that transforms labour from a curse into a moral imperative and a path to salvation. The good person works hard; poverty is a sign of moral failure; wealth is evidence of virtue. This ideology — secularised into meritocracy, hustle culture, and the gig economy's celebration of being your own boss — makes exploitation feel like self-realisation and precarity feel like freedom.",
+      relates: "Weber: work ethic as the spirit of capitalism"
+    },
+    {
+      id: "bullshit_jobs", type: "antithesis", color: "#ff6b35",
+      label: "Bullshit\nJobs",
+      rx: .34, ry: .70, cluster: "V. The Future of Work",
+      desc: "David Graeber's Bullshit Jobs: a large proportion of employment in financialised capitalism consists of jobs that the workers themselves believe serve no useful social purpose — corporate lawyers, PR consultants, financial compliance officers, telemarketing, certain categories of management. Automation has eliminated useful jobs and created useless ones. The work ethic compels people to perform pointless tasks rather than accepting that technology has made their labour unnecessary.",
+      relates: "Graeber: technology creates useless jobs to preserve the work ethic"
+    },
+    {
+      id: "right_to_be_lazy", type: "synthesis", color: "#18c97c",
+      label: "The Right\nto Be Lazy",
+      rx: .24, ry: .84, cluster: "V. The Future of Work",
+      desc: "Paul Lafargue's 1883 pamphlet: the right to be lazy — the demand for a three-hour working day — is the condition of genuine human flourishing. The four-day week trials in Iceland, the UK, Japan — productivity maintained or improved, wellbeing dramatically better. The synthesis: as automation makes it possible to meet human needs with less labour, the fruits should be shared as free time, not converted into unemployment for some and overwork for others.",
+      relates: "Lafargue 1883 — still waiting for the three-hour day"
+    },
+
+    // VI. Tech & Democracy
+    {
+      id: "tech_democratisation", type: "thesis", color: "#00e676",
+      label: "Tech as\nDemocratisation",
+      rx: .62, ry: .62, cluster: "VI. Tech & Democracy",
+      desc: "The early internet as democratic promise: cheap publishing, global communication, citizen journalism, social movements coordinated across borders. The Arab Spring organised on Twitter. Black Lives Matter amplified on social media. WikiLeaks exposing state secrets. The democratising potential of digital technology was real — and was one reason established powers moved quickly to regulate, surveil, and enclose it.",
+      relates: "Digital technology as democratic amplifier — briefly"
+    },
+    {
+      id: "tech_authoritarianism", type: "antithesis", color: "#ff6b35",
+      label: "Digital\nAuthoritarianism",
+      rx: .78, ry: .70, cluster: "VI. Tech & Democracy",
+      desc: "Social media algorithms optimised for engagement produce outrage, polarisation, and conspiracy. Cambridge Analytica harvesting Facebook data for electoral manipulation. China's social credit system. NSA mass surveillance revealed by Snowden. Facial recognition deployed against protesters. The same technology that enabled the Arab Spring enabled the surveillance of its participants. Digital infrastructure in authoritarian hands is the most powerful control apparatus ever built.",
+      relates: "The most powerful control apparatus ever built"
+    },
+    {
+      id: "tech_governance", type: "synthesis", color: "#18c97c",
+      label: "Democratic\nTech\nGovernance",
+      rx: .70, ry: .84, cluster: "VI. Tech & Democracy",
+      desc: "The synthesis: technology governance as a democratic question, not a technical one. The EU's GDPR, Digital Markets Act, AI Act — imperfect but real attempts to subject technology to democratic accountability. Taiwan's digital democracy experiments. Algorithmic transparency requirements. Data protection as a collective right. The question is not whether to regulate technology but who governs it — and in whose interest.",
+      relates: "Technology governance as democratic question"
+    }
+  ],
+
+  edges: [
+    ["tech_productive_promise", "automation_displacement"],
+    ["automation_displacement", "tech_universal_basic"],
+    ["sharing_economy_promise", "platform_monopoly"],
+    ["platform_monopoly",       "platform_cooperativism"],
+    ["knowledge_commons_ai",    "ai_enclosure"],
+    ["ai_enclosure",            "open_ai_movement"],
+    ["open_source",             "digital_enclosure_ii"],
+    ["digital_enclosure_ii",    "digital_commons_future"],
+    ["work_ethic",              "bullshit_jobs"],
+    ["bullshit_jobs",           "right_to_be_lazy"],
+    ["tech_democratisation",    "tech_authoritarianism"],
+    ["tech_authoritarianism",   "tech_governance"],
+    // Cross-wiring
+    ["automation_displacement", "bullshit_jobs"],
+    ["platform_monopoly",       "ai_enclosure"],
+    ["ai_enclosure",            "tech_authoritarianism"],
+    ["open_source",             "knowledge_commons_ai"],
+    ["platform_cooperativism",  "digital_commons_future"],
+    ["tech_universal_basic",    "right_to_be_lazy"],
+    ["digital_commons_future",  "tech_governance"],
+    ["open_ai_movement",        "digital_commons_future"],
+    ["tech_governance",         "platform_cooperativism"],
+    ["automation_displacement", "platform_monopoly"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  X. HOUSING & LAND
+// ══════════════════════════════════════════════════════════
+DATA.housing = {
+  label: "Housing & Land",
+  desc:  "Land is the original commons — and its enclosure is the original act of capitalist dispossession. Housing has been transformed from a human need into a financial asset. Rent extracts wealth from those who need shelter and transfers it to those who own land. The housing crisis is not a failure of the market — it is the market working exactly as designed.",
+  accentColor: '#ff9800',
+  thesisColor: '#ff9800',
+
+  clusters: [
+    { label: "I. Land & Enclosure",            x: .10,  y: .05 },
+    { label: "II. Housing as Financialised Asset", x: .34, y: .05 },
+    { label: "III. Rent & Extraction",         x: .60,  y: .05 },
+    { label: "IV. The Housing Crisis",         x: .84,  y: .05 },
+    { label: "V. Public & Social Housing",     x: .28,  y: .54 },
+    { label: "VI. Land Reform & Commons",      x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. Land & Enclosure
+    {
+      id: "land_as_commons", type: "thesis", color: "#ff9800",
+      label: "Land as\nCommons",
+      rx: .06, ry: .18, cluster: "I. Land & Enclosure",
+      desc: "Before enclosure, common land was collectively managed — for grazing, gathering, fuel, and building. The commons was not a free-for-all but a complex system of customary rights, managed by communities for communities. It was the material basis of peasant independence: a floor below which no one could fall as long as the commons existed. Its destruction was the precondition for the creation of a workforce with nothing to sell but its labour.",
+      relates: "The commons as the floor of peasant independence"
+    },
+    {
+      id: "enclosure_land", type: "antithesis", color: "#ff6b35",
+      label: "Enclosure &\nDispossession",
+      rx: .17, ry: .18, cluster: "I. Land & Enclosure",
+      desc: "Between 1750 and 1850, over six million acres of common land in England were enclosed by Act of Parliament — transferred from collective use to private ownership. The dispossessed peasantry flooded into the new industrial cities: Marx's primitive accumulation. E.P. Thompson: the enclosures were a plain enough case of class robbery. The village commons became the landlord's field; the commoner became the factory worker.",
+      relates: "Thompson: the enclosures were class robbery"
+    },
+    {
+      id: "land_value_tax", type: "synthesis", color: "#18c97c",
+      label: "Land Value\nTax & Commons",
+      rx: .115, ry: .34, cluster: "I. Land & Enclosure",
+      desc: "Henry George's Progress and Poverty (1879): land value is socially created — by the community around it, by public investment, by population growth — yet captured privately by landowners who did nothing to create it. The Land Value Tax: tax the unimproved value of land, not labour or capital. This single tax would eliminate land speculation, fund public services from socially created wealth, and restore to the community what the community created. Still the most radical reform that sounds completely reasonable.",
+      relates: "George: land value is socially created — socially it should be reclaimed"
+    },
+
+    // II. Housing as Financialised Asset
+    {
+      id: "housing_as_home", type: "thesis", color: "#ff9800",
+      label: "Housing\nas Home",
+      rx: .28, ry: .18, cluster: "II. Housing as Financialised Asset",
+      desc: "The post-war settlement treated housing as a social good — a human need to be met collectively through council housing, rent controls, and housing associations. At its peak, over a third of British households lived in council housing of genuinely good quality: Parker Morris standards, mixed communities, secure tenancies. Housing as home: stable, affordable, a platform for a decent life rather than a source of financial anxiety.",
+      relates: "Housing as social good — the post-war settlement"
+    },
+    {
+      id: "housing_financialisation", type: "antithesis", color: "#ff6b35",
+      label: "Housing\nFinancialisation",
+      rx: .40, ry: .18, cluster: "II. Housing as Financialised Asset",
+      desc: "Right to Buy (1980) sold council housing at discount and banned councils from replacing it — transferring public wealth to private ownership and eventually to buy-to-let landlords. Mortgage interest tax relief, planning restrictions, and quantitative easing inflated house prices into the primary vehicle of middle-class wealth accumulation. Housing transformed from home into asset class: something to invest in, speculate on, and extract rent from.",
+      relates: "Right to Buy transferred public wealth to private landlords"
+    },
+    {
+      id: "generation_rent", type: "synthesis", color: "#18c97c",
+      label: "Generation\nRent",
+      rx: .34, ry: .34, cluster: "II. Housing as Financialised Asset",
+      desc: "The synthesis of housing financialisation: a generation locked out of ownership, paying ever-rising rents to landlords whose assets appreciate through no effort of their own. The Resolution Foundation: those born in the 1980s are the first generation likely to be worse off than their parents. Housing wealth concentrates with the old and the already-wealthy; housing costs consume an ever-larger share of young workers' wages. The housing ladder has become a housing chasm.",
+      relates: "The first generation worse off than their parents"
+    },
+
+    // III. Rent & Extraction
+    {
+      id: "rent_theory", type: "thesis", color: "#ff9800",
+      label: "Ricardo's\nRent Theory",
+      rx: .54, ry: .18, cluster: "III. Rent & Extraction",
+      desc: "David Ricardo: rent is the payment for the use of the original and indestructible powers of the soil. Crucially, rent is not a reward for productive activity — it is extracted from the surplus created by others. The landowner contributes nothing to production; they simply own what others need to use. Classical economics before neoclassicism recognised rent as parasitic extraction — a view conveniently forgotten when land became the primary vehicle of bourgeois wealth.",
+      relates: "Ricardo: rent is extraction — not production"
+    },
+    {
+      id: "rent_extraction_modern", type: "antithesis", color: "#ff6b35",
+      label: "Modern\nRent Extraction",
+      rx: .66, ry: .18, cluster: "III. Rent & Extraction",
+      desc: "Private landlords in England received £63 billion in rental income in 2023 — wealth transferred from tenants who work to landlords who own. In London, average private rents consume over 40% of median earnings. Short-term lets (Airbnb) remove housing from residential supply, driving rents higher. The buy-to-let landlord class is a rentier class in the classical sense: living off the surplus created by others without contributing to production.",
+      relates: "63 billion in rent — extracted from those who work"
+    },
+    {
+      id: "rent_control", type: "synthesis", color: "#18c97c",
+      label: "Rent Control\n& Social\nLandlord",
+      rx: .60, ry: .34, cluster: "III. Rent & Extraction",
+      desc: "Rent controls — practised in Vienna, Berlin, New York, and post-war Britain — limit rent extraction and stabilise communities. The Vienna model: 60% of residents in social or cooperative housing, rents at a third of market rate, mixed-income communities, maintained for generations. Not a utopia but a proof that housing policy is a political choice. The synthesis: treat rental income as the socially created value it is and return it to the community.",
+      relates: "Vienna: 60% social housing — proof that politics determines housing"
+    },
+
+    // IV. The Housing Crisis
+    {
+      id: "planning_system", type: "thesis", color: "#ff9800",
+      label: "The Planning\nSystem",
+      rx: .78, ry: .18, cluster: "IV. The Housing Crisis",
+      desc: "The 1947 Town and Country Planning Act: development rights nationalised, planning permission required, the community given the right to shape its own built environment. A genuine democratic achievement — preventing speculative development, protecting green space, enabling comprehensive redevelopment of bombed cities. The planning system at its best as collective self-determination over the built environment.",
+      relates: "Planning as democratic control of the built environment"
+    },
+    {
+      id: "nimbyism_speculation", type: "antithesis", color: "#ff6b35",
+      label: "NIMBYism &\nSpeculation",
+      rx: .90, ry: .18, cluster: "IV. The Housing Crisis",
+      desc: "The planning system captured by existing homeowners who benefit from housing scarcity — NIMBYism as a politics of asset protection. Developers land-banking: buying planning permissions and sitting on them while values rise rather than building. The green belt as a mechanism for excluding the poor from prosperous areas. The planning system simultaneously blocks necessary housing and fails to prevent speculative development that serves no social need.",
+      relates: "Planning captured — used to protect existing owners from competition"
+    },
+    {
+      id: "community_land_trust", type: "synthesis", color: "#18c97c",
+      label: "Community\nLand Trusts",
+      rx: .84, ry: .34, cluster: "IV. The Housing Crisis",
+      desc: "Community Land Trusts permanently remove land from the speculative market: the trust owns the land in perpetuity, residents own their homes, resale prices are controlled to maintain affordability for future generations. Granby Four Streets in Liverpool — Assemble Turner Prize. The East London CLT. Coin Street Community Builders on the South Bank. The synthesis: land returned to the commons through democratic ownership, housing permanently decoupled from speculation.",
+      relates: "Land returned to the commons — permanently affordable"
+    },
+
+    // V. Public & Social Housing
+    {
+      id: "council_housing_golden_age", type: "thesis", color: "#ff9800",
+      label: "Council\nHousing",
+      rx: .18, ry: .62, cluster: "V. Public & Social Housing",
+      desc: "At its peak (1979), 42% of British households lived in council housing — built to Parker Morris space standards, with gardens, community facilities, and secure lifetime tenancies. Aneurin Bevan insisted on mixed communities: the working man next to the doctor and the teacher. Council housing was not a safety net for the desperate but a universal service for working people — genuinely good homes at genuinely affordable rents.",
+      relates: "Bevan: council housing for everyone — not just the poor"
+    },
+    {
+      id: "right_to_buy_destruction", type: "antithesis", color: "#ff6b35",
+      label: "Right to Buy\n& Residualisation",
+      rx: .34, ry: .70, cluster: "V. Public & Social Housing",
+      desc: "Right to Buy sold the best council housing at up to 70% discount; councils were forbidden from using receipts to build replacements. The remaining stock became residualised — concentrated poverty, stigmatised as housing of last resort. Over two million council homes sold since 1980; around 40% now owned by private landlords renting them back to the council at market rates. The public subsidy that built them transferred to private wealth; the public now pays again in housing benefit.",
+      relates: "Public housing sold — then rented back at market rates"
+    },
+    {
+      id: "new_social_housing", type: "synthesis", color: "#18c97c",
+      label: "New\nSocial Housing\nProgramme",
+      rx: .24, ry: .84, cluster: "V. Public & Social Housing",
+      desc: "The synthesis of the housing crisis cannot be a market solution — markets built the crisis. A new social housing programme: councils empowered to borrow and build, housing associations returning to genuine social rents, new garden cities on land compulsorily purchased at existing use value (not speculative hope value). Scotland's Housing Act, Wales's Renting Homes Act — the nations showing the way. Housing as a human right, not an asset class.",
+      relates: "Housing as human right — not asset class"
+    },
+
+    // VI. Land Reform & Commons
+    {
+      id: "scottish_land_reform", type: "thesis", color: "#ff9800",
+      label: "Scottish\nLand Reform",
+      rx: .62, ry: .62, cluster: "VI. Land Reform & Commons",
+      desc: "Scotland is one of the most unequal land distributions in the developed world: 432 landowners own half of all private land. The Land Reform Acts (2003, 2016) gave communities the right to buy land when it comes to market, and to buy compulsorily where ownership is causing harm. The Eigg Heritage Trust, the Assynt Crofters — communities taking ownership of the land they live on. The most radical land reform in British history — still not radical enough.",
+      relates: "432 owners own half of Scotland — land reform begins"
+    },
+    {
+      id: "land_hoarding", type: "antithesis", color: "#ff6b35",
+      label: "Land Hoarding\n& Aristocratic\nWealth",
+      rx: .78, ry: .70, cluster: "VI. Land Reform & Commons",
+      desc: "The Duke of Buccleuch owns 240,000 acres. The Crown Estate owns 360,000 acres of urban land. The Church of England owns 105,000 acres. The aristocratic land settlement of the Norman Conquest persists into the 21st century — land wealth accumulated through conquest, never redistributed, appreciating automatically as the economy grows around it. Planning permission transforms agricultural land worth £10,000 per acre into development land worth £2 million per acre — the landowner captures this entirely.",
+      relates: "The Norman Conquest settlement — unchanged after a thousand years"
+    },
+    {
+      id: "land_commons_future", type: "synthesis", color: "#18c97c",
+      label: "Land as\nCommons",
+      rx: .70, ry: .84, cluster: "VI. Land Reform & Commons",
+      desc: "The synthesis returns to the beginning: land as commons. Not private ownership, not state ownership, but community ownership — democratically governed, permanently affordable, the wealth it generates returned to the community that created it. Community Land Trusts, land value taxation, compulsory purchase at use value, right to buy for communities, urban commons. The Norman settlement is not natural or inevitable — it is a political arrangement, and political arrangements can be changed.",
+      relates: "Land to the commons — the original demand, still unanswered"
+    }
+  ],
+
+  edges: [
+    ["land_as_commons",           "enclosure_land"],
+    ["enclosure_land",            "land_value_tax"],
+    ["housing_as_home",           "housing_financialisation"],
+    ["housing_financialisation",  "generation_rent"],
+    ["rent_theory",               "rent_extraction_modern"],
+    ["rent_extraction_modern",    "rent_control"],
+    ["planning_system",           "nimbyism_speculation"],
+    ["nimbyism_speculation",      "community_land_trust"],
+    ["council_housing_golden_age","right_to_buy_destruction"],
+    ["right_to_buy_destruction",  "new_social_housing"],
+    ["scottish_land_reform",      "land_hoarding"],
+    ["land_hoarding",             "land_commons_future"],
+    // Cross-wiring
+    ["enclosure_land",            "housing_financialisation"],
+    ["housing_financialisation",  "rent_extraction_modern"],
+    ["right_to_buy_destruction",  "housing_financialisation"],
+    ["generation_rent",           "rent_extraction_modern"],
+    ["land_value_tax",            "rent_control"],
+    ["community_land_trust",      "land_commons_future"],
+    ["new_social_housing",        "rent_control"],
+    ["land_commons_future",       "community_land_trust"],
+    ["nimbyism_speculation",      "land_hoarding"],
+    ["scottish_land_reform",      "land_value_tax"],
+    ["council_housing_golden_age","housing_as_home"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  XI. HEALTH, PHARMA & THE BODY
+// ══════════════════════════════════════════════════════════
+DATA.health = {
+  label: "Health, Pharma & the Body",
+  desc:  "Health is not a commodity — it is a human need and a social product. The NHS was built on this insight. But pharmaceutical capital, austerity, and the mental health crisis produced by capitalism itself are steadily recommodifying care. The body is both a site of exploitation and a site of resistance.",
+  accentColor: '#f44336',
+  thesisColor: '#f44336',
+
+  clusters: [
+    { label: "I. The NHS & Decommodified Care", x: .10,  y: .05 },
+    { label: "II. Pharmaceutical Capital",      x: .34,  y: .05 },
+    { label: "III. Mental Health & Society",    x: .60,  y: .05 },
+    { label: "IV. Public Health & Prevention",  x: .84,  y: .05 },
+    { label: "V. Austerity & Health",           x: .28,  y: .54 },
+    { label: "VI. Health as Commons",           x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. NHS
+    {
+      id: "nhs_founding", type: "thesis", color: "#f44336",
+      label: "The NHS:\nHealth\nDecommodified",
+      rx: .06, ry: .18, cluster: "I. The NHS & Decommodified Care",
+      desc: "Aneurin Bevan's NHS (1948): healthcare free at the point of need, funded from taxation, available to all regardless of ability to pay. The most beloved institution in British public life, consistently rated so in surveys. The NHS is not just a health system but a political statement: some things are too important to be rationed by price. The founding principle — universality — remains radical because it is constantly under attack.",
+      relates: "Bevan: the NHS is a statement that health is not a commodity"
+    },
+    {
+      id: "nhs_privatisation", type: "antithesis", color: "#ff6b35",
+      label: "Creeping\nPrivatisation",
+      rx: .17, ry: .18, cluster: "I. The NHS & Decommodified Care",
+      desc: "The Health and Social Care Act (2012) mandated competitive tendering for NHS services — opening the door to private providers. PFI hospitals built at ruinous cost, now consuming clinical budgets in repayments. Virgin Care, Circle Health, SERCO — private companies extracting profit from public health. The NHS remains nominally universal but is progressively hollowed out: underfunded, understaffed, with private providers cherry-picking profitable treatments.",
+      relates: "Private profit extracted from public health"
+    },
+    {
+      id: "nhs_defence", type: "synthesis", color: "#18c97c",
+      label: "NHS Defence\n& Renewal",
+      rx: .115, ry: .34, cluster: "I. The NHS & Decommodified Care",
+      desc: "The synthesis: not merely defending the existing NHS but renewing it. Bringing privatised services back in-house, cancelling PFI contracts, integrating social care, expanding mental health provision, addressing the racial health gap, building a genuine public health system that tackles the social determinants of health — housing, poverty, environment. The NHS as the foundation of a broader social right to health.",
+      relates: "Not just defend but renew — health as a social right"
+    },
+
+    // II. Pharmaceutical Capital
+    {
+      id: "pharmaceutical_innovation", type: "thesis", color: "#f44336",
+      label: "Pharma\nInnovation",
+      rx: .28, ry: .18, cluster: "II. Pharmaceutical Capital",
+      desc: "Pharmaceutical companies invest in research and development, taking enormous financial risks to bring new medicines to market. The patent system rewards this risk-taking with a temporary monopoly, allowing recovery of R&D costs. The result: genuine medical breakthroughs — antibiotics, antiretrovirals, vaccines, cancer treatments. The thesis of pharmaceutical capital: without profit incentive, innovation dries up.",
+      relates: "The innovation argument for pharmaceutical patents"
+    },
+    {
+      id: "pharma_monopoly", type: "antithesis", color: "#ff6b35",
+      label: "Pharma\nMonopoly &\nPrice Gouging",
+      rx: .40, ry: .18, cluster: "II. Pharmaceutical Capital",
+      desc: "Most basic pharmaceutical research is publicly funded — by the NIH, the MRC, university laboratories. Companies then patent the results, charge monopoly prices, and spend more on marketing than on R&D. Insulin, discovered in 1921 with public funding, costs $300 per vial in the US and $30 in Canada. Gilead's Sovaldi, developed with public research, cured hepatitis C — at $1,000 per pill. The innovation is socialised; the profit is privatised.",
+      relates: "Public research — private patents — monopoly pricing"
+    },
+    {
+      id: "open_pharma", type: "synthesis", color: "#18c97c",
+      label: "Open\nPharmaceuticals\n& Public R&D",
+      rx: .34, ry: .34, cluster: "II. Pharmaceutical Capital",
+      desc: "The synthesis: publicly fund pharmaceutical research, retain public ownership of resulting patents, license generic production globally. The Medicines Patent Pool — already working for HIV, hepatitis C, and COVID treatments in low-income countries. The WHO's proposed Pandemic Treaty provisions. Mariana Mazzucato: the state takes the risk; the state should take the reward. Generic medicines, open formularies, and public pharmaceutical companies are not utopian — they exist and work.",
+      relates: "Public risk — public reward — generic medicines for all"
+    },
+
+    // III. Mental Health & Society
+    {
+      id: "mental_health_social", type: "thesis", color: "#f44336",
+      label: "Mental Health\nas Social\nProduct",
+      rx: .54, ry: .18, cluster: "III. Mental Health & Society",
+      desc: "The social determinants of mental health: poverty, insecurity, unemployment, poor housing, debt, discrimination, isolation, trauma. Depression and anxiety are not biochemical malfunctions independent of social context — they are rational responses to irrational social conditions. The epidemic of mental ill health in neoliberal societies is not a mystery: it is the predictable consequence of insecurity, atomisation, overwork, and the destruction of collective life.",
+      relates: "Mental illness as rational response to irrational conditions"
+    },
+    {
+      id: "medicalisation", type: "antithesis", color: "#ff6b35",
+      label: "Medicalisation\n& the Pill\nIndustry",
+      rx: .66, ry: .18, cluster: "III. Mental Health & Society",
+      desc: "The pharmaceutical model of mental health: diagnose individual biochemical disorder, prescribe medication. Antidepressant prescriptions in England: 8.3 million people, 89 million items per year. This is not simply bad medicine — it is ideologically convenient medicine. Treating social problems as individual pathologies removes them from political contestation. The depressed worker needs a pill, not a union. The anxious tenant needs CBT, not secure housing.",
+      relates: "Social problems depoliticised as individual pathology"
+    },
+    {
+      id: "social_prescribing", type: "synthesis", color: "#18c97c",
+      label: "Social\nPrescribing &\nCollective Care",
+      rx: .60, ry: .34, cluster: "III. Mental Health & Society",
+      desc: "Social prescribing: GPs referring patients to community activities, arts groups, gardening, volunteering, mutual aid networks rather than (or alongside) medication. The evidence base is strong. The deeper implication: health requires community, connection, meaningful activity, economic security. The synthesis of medicalisation is not anti-medicine but a recognition that health is produced collectively — in communities, not just in consulting rooms.",
+      relates: "Health produced in communities — not just consulting rooms"
+    },
+
+    // IV. Public Health & Prevention
+    {
+      id: "public_health_tradition", type: "thesis", color: "#f44336",
+      label: "Public Health\nTradition",
+      rx: .78, ry: .18, cluster: "IV. Public Health & Prevention",
+      desc: "The Victorian public health revolution: clean water, sewers, food standards, vaccination, factory safety legislation. John Snow mapping cholera cases in Soho in 1854. Edwin Chadwick's sanitary movement. The life expectancy gains of the 19th and early 20th centuries came not from medicine but from public health infrastructure — clean water, decent housing, adequate nutrition. Prevention is always more effective and cheaper than cure.",
+      relates: "Clean water saved more lives than any medicine"
+    },
+    {
+      id: "commercial_determinants", type: "antithesis", color: "#ff6b35",
+      label: "Commercial\nDeterminants\nof Health",
+      rx: .90, ry: .18, cluster: "IV. Public Health & Prevention",
+      desc: "The tobacco industry's playbook — fund doubt, lobby against regulation, target youth — has been adopted by ultra-processed food, alcohol, gambling, and fossil fuel industries. Ultra-processed food is engineered to be addictive and is disproportionately consumed in deprived communities. Obesity, type 2 diabetes, liver disease, gambling addiction — diseases of commerce, systematically produced by industries that then lobby against the public health measures that would reduce their profits.",
+      relates: "Industries that produce disease lobby against the cure"
+    },
+    {
+      id: "health_democracy", type: "synthesis", color: "#18c97c",
+      label: "Health\nDemocracy &\nPrevention",
+      rx: .84, ry: .34, cluster: "IV. Public Health & Prevention",
+      desc: "The synthesis: a genuinely preventive public health system that addresses the social and commercial determinants of health — regulating advertising, taxing harmful products, guaranteeing healthy food and housing, funding community health infrastructure. The Marmot Review: reducing health inequalities requires action on the social gradient — income, education, housing, work. Health democracy: communities shaping the conditions that determine their health.",
+      relates: "Marmot: health inequality requires social action — not just medicine"
+    },
+
+    // V. Austerity & Health
+    {
+      id: "health_inequality", type: "thesis", color: "#f44336",
+      label: "Health\nInequality",
+      rx: .18, ry: .62, cluster: "V. Austerity & Health",
+      desc: "In Blackpool, male life expectancy is 74. In Kensington and Chelsea, it is 83. A nine-year gap between the most deprived and most affluent areas of England — and it has widened since 2010. Health inequality is not random: it follows the gradient of income, wealth, housing quality, air quality, and access to services. The postcode lottery of health is capitalism's most visible verdict on its own inequalities.",
+      relates: "Nine years of life — stolen by inequality"
+    },
+    {
+      id: "austerity_health", type: "antithesis", color: "#ff6b35",
+      label: "Austerity\nKills",
+      rx: .34, ry: .70, cluster: "V. Austerity & Health",
+      desc: "The BMJ, The Lancet, and Public Health England have all documented the mortality consequences of post-2010 austerity: excess deaths from cuts to social care, NHS underfunding, benefit sanctions, air pollution from delayed environmental regulation. Professor Danny Dorling estimated 120,000 excess deaths attributable to austerity between 2010 and 2017. Austerity is not a neutral fiscal policy — it is a political choice with a body count.",
+      relates: "Dorling: 120,000 excess deaths from austerity"
+    },
+    {
+      id: "health_commons", type: "synthesis", color: "#18c97c",
+      label: "Health\nas Commons",
+      rx: .24, ry: .84, cluster: "V. Austerity & Health",
+      desc: "The synthesis: health as a commons — collectively produced, collectively maintained, equally available. The NHS was this insight institutionalised. Its renewal requires extending the logic: social care integrated and publicly funded, mental health treated as seriously as physical health, the social determinants addressed through housing, income, and environmental policy. Health is not an individual achievement or a market product — it is what we make together.",
+      relates: "Health as commons — produced and maintained collectively"
+    },
+
+    // VI. Health as Commons
+    {
+      id: "mutual_aid_health", type: "thesis", color: "#f44336",
+      label: "Mutual Aid\n& Community\nHealth",
+      rx: .62, ry: .62, cluster: "VI. Health as Commons",
+      desc: "Before the NHS, mutual aid societies — the Rochdale Infirmary, the miners' medical aid societies of South Wales — provided collective healthcare funded by penny contributions. The Black Panther Party's free breakfast programmes and community health clinics. The COVID-19 mutual aid networks of 2020 — 4,000 groups across the UK providing food, medicine, and companionship within weeks. Collective care as the original social technology, preceding and outlasting every state.",
+      relates: "Collective care precedes and outlasts the state"
+    },
+    {
+      id: "health_racism", type: "antithesis", color: "#ff6b35",
+      label: "Structural\nRacism &\nHealth",
+      rx: .78, ry: .70, cluster: "VI. Health as Commons",
+      desc: "Black women in the UK are four times more likely to die in childbirth than white women. COVID-19 killed Black, Asian and minority ethnic people at twice the rate of white people — not through biology but through structural racism: occupational exposure, overcrowded housing, distrust of services rooted in historical mistreatment. The Windrush generation denied NHS care they had paid for and built. Structural racism is a public health crisis that public health rarely names.",
+      relates: "Structural racism as public health crisis"
+    },
+    {
+      id: "health_justice", type: "synthesis", color: "#18c97c",
+      label: "Health\nJustice",
+      rx: .70, ry: .84, cluster: "VI. Health as Commons",
+      desc: "Health justice: the convergence of health equity, environmental justice, racial justice, and economic justice. You cannot have health without decent housing, clean air, economic security, freedom from discrimination, and democratic control over the conditions of your life. The synthesis connects the NHS to the housing movement, to the climate movement, to anti-racism, to feminism — recognising that health is produced by the whole of social life, and that justice in health requires justice in everything.",
+      relates: "Health justice connects every other struggle"
+    }
+  ],
+
+  edges: [
+    ["nhs_founding",             "nhs_privatisation"],
+    ["nhs_privatisation",        "nhs_defence"],
+    ["pharmaceutical_innovation","pharma_monopoly"],
+    ["pharma_monopoly",          "open_pharma"],
+    ["mental_health_social",     "medicalisation"],
+    ["medicalisation",           "social_prescribing"],
+    ["public_health_tradition",  "commercial_determinants"],
+    ["commercial_determinants",  "health_democracy"],
+    ["health_inequality",        "austerity_health"],
+    ["austerity_health",         "health_commons"],
+    ["mutual_aid_health",        "health_racism"],
+    ["health_racism",            "health_justice"],
+    // Cross-wiring
+    ["nhs_privatisation",        "pharma_monopoly"],
+    ["austerity_health",         "nhs_privatisation"],
+    ["mental_health_social",     "health_inequality"],
+    ["medicalisation",           "pharma_monopoly"],
+    ["commercial_determinants",  "health_inequality"],
+    ["social_prescribing",       "mutual_aid_health"],
+    ["health_commons",           "health_justice"],
+    ["health_racism",            "health_inequality"],
+    ["nhs_defence",              "health_commons"],
+    ["open_pharma",              "health_justice"],
+    ["mutual_aid_health",        "nhs_founding"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  XII. EDUCATION & HUMAN CAPITAL
+// ══════════════════════════════════════════════════════════
+DATA.education = {
+  label: "Education & Human Capital",
+  desc:  "Education is contested terrain: between knowledge as commons and knowledge as credential, between education for human development and training for labour markets, between the university as critical institution and the university as corporation. The transformation of education into human capital investment is not progress — it is enclosure.",
+  accentColor: '#9c27b0',
+  thesisColor: '#9c27b0',
+
+  clusters: [
+    { label: "I. Education as Commons",         x: .10,  y: .05 },
+    { label: "II. Human Capital Theory",         x: .34,  y: .05 },
+    { label: "III. The University",              x: .60,  y: .05 },
+    { label: "IV. Schools & Marketisation",      x: .84,  y: .05 },
+    { label: "V. Student Debt",                  x: .28,  y: .54 },
+    { label: "VI. Popular Education",            x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. Education as Commons
+    {
+      id: "education_commons", type: "thesis", color: "#9c27b0",
+      label: "Education\nas Commons",
+      rx: .06, ry: .18, cluster: "I. Education as Commons",
+      desc: "The radical tradition: education as the development of the whole person, the cultivation of critical consciousness, the transmission and transformation of collective knowledge. From the Mechanics' Institutes and the WEA to Dewey's democratic education and Freire's pedagogy of the oppressed — education as a practice of freedom, not a production of compliant workers. Knowledge as a collective inheritance, not a private investment.",
+      relates: "Freire: education as a practice of freedom"
+    },
+    {
+      id: "education_enclosure", type: "antithesis", color: "#ff6b35",
+      label: "Education\nEnclosed",
+      rx: .17, ry: .18, cluster: "I. Education as Commons",
+      desc: "The progressive enclosure of education: from free grammar schools to grammar school fees, from free universities to tuition fees, from public libraries to closed academic journals behind paywalls, from the WEA to CPD products sold to employers. Knowledge that was collectively produced and should be collectively available is progressively commodified — access priced, credentials monetised, the education commons enclosed as human capital investment.",
+      relates: "The knowledge commons progressively enclosed"
+    },
+    {
+      id: "open_education", type: "synthesis", color: "#18c97c",
+      label: "Open\nEducation &\nKnowledge\nCommons",
+      rx: .115, ry: .34, cluster: "I. Education as Commons",
+      desc: "The synthesis: open access publishing, MIT OpenCourseWare, Khan Academy, Wikipedia, Creative Commons — the knowledge commons reasserting itself through digital technology. Free schools of thought in the Gramscian sense: organic intellectuals emerging from working-class communities. The synthesis demands free education at all levels, open access to all publicly funded research, and the recognition that knowledge is produced collectively and belongs to everyone.",
+      relates: "Knowledge produced collectively — belongs to everyone"
+    },
+
+    // II. Human Capital Theory
+    {
+      id: "human_capital", type: "thesis", color: "#9c27b0",
+      label: "Human\nCapital Theory",
+      rx: .28, ry: .18, cluster: "II. Human Capital Theory",
+      desc: "Gary Becker's human capital theory (1964): education is an investment in productive capacity. Workers invest in their own skills to increase their future earnings; employers invest in training to increase productivity. The theory reframes education as a private investment with a private return — justifying tuition fees (you benefit, you pay) and narrowing curricula to market-relevant skills. The human being becomes their own portfolio of productive attributes.",
+      relates: "Becker: the human being as their own capital investment"
+    },
+    {
+      id: "credential_inflation", type: "antithesis", color: "#ff6b35",
+      label: "Credential\nInflation &\nSkills Gap Myth",
+      rx: .40, ry: .18, cluster: "II. Human Capital Theory",
+      desc: "If human capital theory were correct, more education would reduce inequality as workers invested in higher skills. Instead: credential inflation (jobs that once required GCSEs now require degrees, with no change in the actual work), a skills gap that is actually a wages gap (employers want skills without paying for them), and a graduate labour market where millions of graduates work in non-graduate jobs while carrying student debt. The theory legitimises inequality it claims to dissolve.",
+      relates: "Human capital theory legitimises the inequality it claims to solve"
+    },
+    {
+      id: "education_equality", type: "synthesis", color: "#18c97c",
+      label: "Education\nfor Equality",
+      rx: .34, ry: .34, cluster: "II. Human Capital Theory",
+      desc: "The synthesis: education policy oriented not toward producing human capital but toward producing equality. Comprehensive schools, free universities, well-paid teachers, small classes, rich curricula including arts, sport, and civic education — the conditions under which all children can flourish, not just those whose parents can pay. Finland's education system: no private schools, no league tables, high teacher autonomy, high attainment. Equality of outcome, not merely opportunity.",
+      relates: "Finland: no private schools — high attainment — proof"
+    },
+
+    // III. The University
+    {
+      id: "university_tradition", type: "thesis", color: "#9c27b0",
+      label: "The Critical\nUniversity",
+      rx: .54, ry: .18, cluster: "III. The University",
+      desc: "The university as a space apart from the immediate demands of the market: where knowledge is pursued for its own sake, where received ideas are subjected to critical scrutiny, where students are initiated into communities of inquiry rather than trained for specific jobs. Newman's idea of a university. Humboldt's research university. The ideal of academic freedom — the right to pursue truth wherever it leads, regardless of its utility or its comfort to power.",
+      relates: "Academic freedom — truth regardless of utility"
+    },
+    {
+      id: "university_corporation", type: "antithesis", color: "#ff6b35",
+      label: "The University\nas Corporation",
+      rx: .66, ry: .18, cluster: "III. The University",
+      desc: "Since 1988, British universities have been progressively transformed into corporations competing for students (now customers), research income, and league table positions. Vice chancellors paid more than the Prime Minister. Casualised academic labour: 68% of teaching in UK universities done by staff on insecure contracts. International students as revenue stream. Research assessed by impact and income rather than significance. The critical university hollowed into a credential factory.",
+      relates: "68% of teaching on insecure contracts — the university proletariat"
+    },
+    {
+      id: "university_commons", type: "synthesis", color: "#18c97c",
+      label: "University\nas Commons",
+      rx: .60, ry: .34, cluster: "III. The University",
+      desc: "The synthesis: the university returned to public purpose. Abolish tuition fees, restore maintenance grants, end the research excellence framework, reverse casualisation, democratise governance — students, staff and communities on boards. Open access for all publicly funded research. The university as a public institution embedded in its region, contributing to community wealth, training the teachers and doctors and engineers a society needs, and producing the critical thought a democracy requires.",
+      relates: "The university embedded in community — not extracting from it"
+    },
+
+    // IV. Schools & Marketisation
+    {
+      id: "comprehensive_ideal", type: "thesis", color: "#9c27b0",
+      label: "The\nComprehensive\nIdeal",
+      rx: .78, ry: .18, cluster: "IV. Schools & Marketisation",
+      desc: "The comprehensive school: every child in the neighbourhood attending the same school, regardless of ability, class, or religion. The ideal of a school as a community institution — reflecting and building the mixed society around it. Where comprehensives succeeded, they produced better outcomes for all pupils, particularly those from disadvantaged backgrounds. Selection benefits the already-advantaged and entrenches inequality.",
+      relates: "The comprehensive as community institution"
+    },
+    {
+      id: "academy_free_school", type: "antithesis", color: "#ff6b35",
+      label: "Academies,\nFree Schools &\nMarketisation",
+      rx: .90, ry: .18, cluster: "IV. Schools & Marketisation",
+      desc: "Academies removed from local authority control, governed by chains run like businesses. Free schools funded by the state but run by religious organisations, private companies, and parent groups — fragmenting the school system and enabling selective intake by stealth. Ofsted as market discipline. League tables forcing schools to game metrics rather than educate. The comprehensive ideal replaced by a market in schools that serves middle-class parents who can navigate it.",
+      relates: "The school market — navigable only if you know how"
+    },
+    {
+      id: "school_democracy", type: "synthesis", color: "#18c97c",
+      label: "Democratic\nLocal Schools",
+      rx: .84, ry: .34, cluster: "IV. Schools & Marketisation",
+      desc: "The synthesis: schools returned to democratic local governance, accountable to their communities. Abolish academisation, bring free schools back into the local authority family, end Ofsted's punitive inspection regime, fund schools equitably rather than through pupil premium sticking plasters, pay teachers properly. A school system oriented toward every child's flourishing — not toward league table performance or market share.",
+      relates: "Schools accountable to communities — not to markets"
+    },
+
+    // V. Student Debt
+    {
+      id: "free_higher_education", type: "thesis", color: "#9c27b0",
+      label: "Free Higher\nEducation",
+      rx: .18, ry: .62, cluster: "V. Student Debt",
+      desc: "Until 1998, higher education in the UK was free, with maintenance grants for living costs. The argument: higher education is a public good — it benefits the whole society, not just the individual graduate. Publicly funded universities produced the doctors, teachers, engineers, and researchers that a society requires. Taxing the graduate cohort through income tax is more progressive and more efficient than front-loading individual debt.",
+      relates: "Higher education as public good — funded publicly"
+    },
+    {
+      id: "tuition_fees", type: "antithesis", color: "#ff6b35",
+      label: "Tuition Fees\n& Student\nDebt",
+      rx: .34, ry: .70, cluster: "V. Student Debt",
+      desc: "From £1,000 (1998) to £3,000 (2006) to £9,000 (2012) to £9,250 (2017) — tuition fees transformed higher education from a public good into a private investment with a private price tag. Average student debt in England: £45,000. The Augar Review found the system regressive: low-earning graduates pay more than high earners because interest compounds before they can repay. The graduate tax is more regressive than income tax — and produces the same revenue.",
+      relates: "Average student debt: £45,000 — for a public good"
+    },
+    {
+      id: "debt_free_education", type: "synthesis", color: "#18c97c",
+      label: "Debt-Free\nEducation",
+      rx: .24, ry: .84, cluster: "V. Student Debt",
+      desc: "The synthesis: abolish tuition fees, restore maintenance grants, cancel existing student debt. Scotland's model: free tuition at Scottish universities. Germany: free university education including for international students. Norway, Finland, Denmark — free higher education as normal. The objection that we cannot afford it fails the MMT test: the real question is not money but resources — do we have enough universities, academics, and students? We do.",
+      relates: "Scotland, Germany, Finland — free universities exist and work"
+    },
+
+    // VI. Popular Education
+    {
+      id: "popular_education_tradition", type: "thesis", color: "#9c27b0",
+      label: "Popular\nEducation\nTradition",
+      rx: .62, ry: .62, cluster: "VI. Popular Education",
+      desc: "The tradition of learning outside formal institutions: the Chartists' reading rooms, the Mechanics' Institutes, the WEA tutorials in trade union halls, the Co-operative College, Ruskin College Oxford (founded for trade union students), the folk high schools of Scandinavia, Highlander Folk School where Rosa Parks and Martin Luther King studied. Education by and for working people, oriented toward understanding and changing the world rather than credentialling for the market.",
+      relates: "WEA, Ruskin, Highlander — education that changed the world"
+    },
+    {
+      id: "education_commodified", type: "antithesis", color: "#ff6b35",
+      label: "CPD,\nCredentialism\n& the Learning\nMarket",
+      rx: .78, ry: .70, cluster: "VI. Popular Education",
+      desc: "The WEA is now a commercial training provider competing for government contracts. Continuing Professional Development is a private market of certificates, badges, and LinkedIn endorsements — knowledge as commodity, learning as consumption. The Open University, founded as accessible higher education for working people, charges full tuition fees. The popular education tradition survives in fragments — but the institutions that sustained it have been colonised by the market logic they once resisted.",
+      relates: "Popular education institutions colonised by market logic"
+    },
+    {
+      id: "education_liberation", type: "synthesis", color: "#18c97c",
+      label: "Freirean\nLiberation\nPedagogy",
+      rx: .70, ry: .84, cluster: "VI. Popular Education",
+      desc: "Paulo Freire's Pedagogy of the Oppressed: the banking model of education deposits knowledge into passive students; liberation pedagogy starts from the lived experience of learners and develops critical consciousness of the structures that shape their lives. Not education for adjustment to the existing order, but education for its transformation. The synthesis lives wherever working people gather to understand and change their world — in trade union education, community organising, and every conversation like this one.",
+      relates: "Freire: every conversation that builds critical consciousness is education"
+    }
+  ],
+
+  edges: [
+    ["education_commons",          "education_enclosure"],
+    ["education_enclosure",        "open_education"],
+    ["human_capital",              "credential_inflation"],
+    ["credential_inflation",       "education_equality"],
+    ["university_tradition",       "university_corporation"],
+    ["university_corporation",     "university_commons"],
+    ["comprehensive_ideal",        "academy_free_school"],
+    ["academy_free_school",        "school_democracy"],
+    ["free_higher_education",      "tuition_fees"],
+    ["tuition_fees",               "debt_free_education"],
+    ["popular_education_tradition","education_commodified"],
+    ["education_commodified",      "education_liberation"],
+    // Cross-wiring
+    ["human_capital",              "tuition_fees"],
+    ["university_corporation",     "credential_inflation"],
+    ["education_enclosure",        "tuition_fees"],
+    ["popular_education_tradition","education_commons"],
+    ["education_liberation",       "open_education"],
+    ["school_democracy",           "education_equality"],
+    ["university_commons",         "open_education"],
+    ["debt_free_education",        "education_equality"],
+    ["academy_free_school",        "credential_inflation"],
+    ["education_liberation",       "education_commons"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  XIII. WAR & THE MILITARY INDUSTRIAL COMPLEX
+// ══════════════════════════════════════════════════════════
+DATA.war = {
+  label: "War & the Military Industrial Complex",
+  desc:  "War is not a breakdown of the international system — it is its normal operation. The military industrial complex profits from conflict it helps create. Arms exports arm the regimes we then condemn. NATO expansion generates the instability it claims to prevent. And the peace movement — from No More War to Stop the War — represents the permanent refusal of those who die in wars to accept their necessity.",
+  accentColor: '#607d8b',
+  thesisColor: '#607d8b',
+
+  clusters: [
+    { label: "I. War & Capital",                 x: .10,  y: .05 },
+    { label: "II. The Arms Industry",            x: .34,  y: .05 },
+    { label: "III. NATO & Imperial Security",    x: .60,  y: .05 },
+    { label: "IV. Proxy Wars & Resource Conflict",x: .84, y: .05 },
+    { label: "V. The Peace Movement",            x: .28,  y: .54 },
+    { label: "VI. War & Democracy",              x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. War & Capital
+    {
+      id: "war_as_policy", type: "thesis", color: "#607d8b",
+      label: "War as\nState Policy",
+      rx: .06, ry: .18, cluster: "I. War & Capital",
+      desc: "Clausewitz: war is the continuation of politics by other means. States use military force to pursue national interests — access to resources, markets, territory, strategic position. The First World War was a war between imperial powers for global dominance; the Second followed the Great Depression and the collapse of the liberal international order. War is not an aberration of normal international relations — it is an instrument of them.",
+      relates: "Clausewitz: war as the continuation of politics"
+    },
+    {
+      id: "war_economy", type: "antithesis", color: "#ff6b35",
+      label: "Permanent\nWar Economy",
+      rx: .17, ry: .18, cluster: "I. War & Capital",
+      desc: "Eisenhower's farewell address (1961): beware the military-industrial complex. Defence spending in the US: $886 billion in 2023 — more than the next ten countries combined. The permanent war economy: military spending as Keynesian stimulus without the redistribution, maintaining employment in arms-producing constituencies, generating demand for the financial sector through government borrowing. War is good business — and the business of war requires war.",
+      relates: "Eisenhower's warning — still unheeded"
+    },
+    {
+      id: "peace_dividend_lost", type: "synthesis", color: "#18c97c",
+      label: "The Peace\nDividend\nNever Came",
+      rx: .115, ry: .34, cluster: "I. War & Capital",
+      desc: "The end of the Cold War promised a peace dividend: military spending redirected to social investment. It never materialised. NATO expanded eastward, new enemies were found, the War on Terror generated a new permanent emergency. The synthesis: the permanent war economy requires permanent enemies. The question is not how to win the current war but why the system requires that there always be one — and whose interests that serves.",
+      relates: "New enemies found — the peace dividend redirected to arms"
+    },
+
+    // II. The Arms Industry
+    {
+      id: "arms_industry", type: "thesis", color: "#607d8b",
+      label: "The Arms\nIndustry",
+      rx: .28, ry: .18, cluster: "II. The Arms Industry",
+      desc: "BAE Systems, Lockheed Martin, Raytheon, Boeing Defence, Thales — the five largest arms companies had combined revenues of $166 billion in 2022. Weapons systems of extraordinary sophistication: stealth aircraft, precision guided munitions, autonomous drones, hypersonic missiles. The arms industry employs hundreds of thousands, funds think tanks and universities, and holds enormous political leverage in constituencies that depend on defence contracts.",
+      relates: "The five largest arms companies — $166 billion in revenue"
+    },
+    {
+      id: "arms_exports", type: "antithesis", color: "#ff6b35",
+      label: "Arms Exports\n& Complicity",
+      rx: .40, ry: .18, cluster: "II. The Arms Industry",
+      desc: "The UK sold £23 billion of arms to Saudi Arabia between 2015 and 2023 — used in Yemen, producing the world's worst humanitarian catastrophe. British-made bombs on Yemeni hospitals. American weapons in Gaza. French arms in Libya. The government condemns human rights abuses with one hand and signs export licences with the other. Arms export policy reveals the gap between stated values and actual interests with particular clarity.",
+      relates: "British bombs on Yemeni hospitals — arms exports reveal real values"
+    },
+    {
+      id: "arms_conversion", type: "synthesis", color: "#18c97c",
+      label: "Arms\nConversion &\nPeace Economy",
+      rx: .34, ry: .34, cluster: "II. The Arms Industry",
+      desc: "The Lucas Aerospace Alternative Corporate Plan (1976): workers at Lucas Aerospace, facing redundancy, drew up their own plan to convert military production to socially useful products — medical equipment, renewable energy technology, hybrid vehicles. A workers' plan for a peace economy. The synthesis: arms industry workers have the skills to build the green economy; the question is political will to redirect their labour from destruction to construction.",
+      relates: "Lucas Plan: arms workers plan their own conversion to useful production"
+    },
+
+    // III. NATO & Imperial Security
+    {
+      id: "nato_founding", type: "thesis", color: "#607d8b",
+      label: "NATO &\nCollective\nSecurity",
+      rx: .54, ry: .18, cluster: "III. NATO & Imperial Security",
+      desc: "NATO was founded in 1949 as a collective defence alliance: an attack on one is an attack on all. In its original conception, a defensive arrangement against Soviet expansionism, providing the security umbrella under which Western European social democracy could develop. The argument: collective security reduces the risk of war by raising the cost of aggression. Small states can shelter behind the alliance rather than maintaining costly independent militaries.",
+      relates: "Collective defence — the founding argument"
+    },
+    {
+      id: "nato_expansion", type: "antithesis", color: "#ff6b35",
+      label: "NATO\nExpansion &\nProvocation",
+      rx: .66, ry: .18, cluster: "III. NATO & Imperial Security",
+      desc: "George Kennan in 1997: NATO expansion is a tragic mistake that will inflame Russian nationalism and produce a new Cold War. James Baker promised Gorbachev that NATO would not expand one inch eastward; it expanded through fourteen countries to Russia's border. NATO is not merely a defensive alliance — it is the military arm of Western hegemony, intervening in Yugoslavia, Afghanistan, Libya. The contradiction: an alliance designed to prevent war that generates the conditions for it.",
+      relates: "Kennan's 1997 warning — ignored until too late"
+    },
+    {
+      id: "common_security", type: "synthesis", color: "#18c97c",
+      label: "Common\nSecurity &\nDisarmament",
+      rx: .60, ry: .34, cluster: "III. NATO & Imperial Security",
+      desc: "The Palme Commission's common security doctrine (1982): security cannot be achieved against adversaries but only with them. Mutual vulnerability requires mutual negotiation, not unilateral advantage. The synthesis: arms control treaties, nuclear disarmament, regional security architectures that include rather than exclude potential adversaries, and the recognition that military spending is always a diversion from the social investment that produces genuine security — health, housing, education, climate.",
+      relates: "Palme: security with adversaries — not against them"
+    },
+
+    // IV. Proxy Wars & Resource Conflict
+    {
+      id: "resource_war", type: "thesis", color: "#607d8b",
+      label: "Resource\nWars",
+      rx: .78, ry: .18, cluster: "IV. Proxy Wars & Resource Conflict",
+      desc: "The Gulf War (1991): oil. Iraq (2003): oil and regional dominance. Libya (2011): oil and Gaddafi's pan-African currency proposal. The Democratic Republic of Congo: cobalt, coltan, gold — a country rich in resources that has been in a state of war for thirty years, with Western mining companies operating throughout. War is rarely about what it says it is about — and the resources beneath the battlefield are rarely coincidental.",
+      relates: "Follow the resources — follow the real causes of war"
+    },
+    {
+      id: "proxy_war", type: "antithesis", color: "#ff6b35",
+      label: "Proxy Wars\n& Imperial\nCompetition",
+      rx: .90, ry: .18, cluster: "IV. Proxy Wars & Resource Conflict",
+      desc: "Cold War proxy conflicts from Korea to Vietnam to Angola to Nicaragua — great power competition fought in the bodies of small nations. The War on Terror: a global counterinsurgency generating the jihadism it claimed to combat, destabilising Iraq, Syria, Libya, Yemen, and the Sahel while providing a permanent justification for military spending and domestic surveillance. Ukraine as the proxy battlefield of NATO-Russia rivalry. The populations of proxy war states die for interests that are not their own.",
+      relates: "Proxy wars — small nations die for great power interests"
+    },
+    {
+      id: "international_law", type: "synthesis", color: "#18c97c",
+      label: "International\nLaw &\nAccountability",
+      rx: .84, ry: .34, cluster: "IV. Proxy Wars & Resource Conflict",
+      desc: "The International Criminal Court, the ICJ, the UN Charter prohibition on aggressive war — imperfect but real frameworks for subjecting state violence to legal accountability. The ICJ ruling on Gaza. The ICC indictment of Putin. The synthesis: not pacifism but the rule of international law applied consistently — to all states including powerful ones. The contradiction is that the states most committed to the international rules-based order are also most likely to break its rules.",
+      relates: "International law applied consistently — including to the powerful"
+    },
+
+    // V. The Peace Movement
+    {
+      id: "anti_war_tradition", type: "thesis", color: "#607d8b",
+      label: "The Anti-War\nTradition",
+      rx: .18, ry: .62, cluster: "V. The Peace Movement",
+      desc: "The oldest internationalist tradition: from the anti-war socialists of 1914 (Keir Hardie, Rosa Luxemburg, Eugene Debs) to the Campaign for Nuclear Disarmament (1957), the Vietnam War movement, the two million who marched against the Iraq War in February 2003. The consistent argument: working-class soldiers die in wars fought for ruling-class interests. No war but the class war. The peace movement as the permanent refusal of those who die in wars to accept their necessity.",
+      relates: "Two million marched — and were ignored — in 2003"
+    },
+    {
+      id: "peace_movement_limits", type: "antithesis", color: "#ff6b35",
+      label: "The Limits\nof the Peace\nMovement",
+      rx: .34, ry: .70, cluster: "V. The Peace Movement",
+      desc: "The Iraq War proceeded despite the largest protest in British history. CND failed to achieve nuclear disarmament. The peace movement's limit: moral witness without political power. The deeper tension: pacifism and anti-imperialism can conflict — what is the correct response to fascism, to genocide, to colonial occupation? The peace movement is internally divided between absolute pacifism and selective support for wars of liberation, a tension that armed states exploit.",
+      relates: "The largest protest in history — and the war proceeded"
+    },
+    {
+      id: "peace_building", type: "synthesis", color: "#18c97c",
+      label: "Peace\nBuilding &\nConflict\nResolution",
+      rx: .24, ry: .84, cluster: "V. The Peace Movement",
+      desc: "The synthesis: not merely opposing wars but building the conditions for peace. The Good Friday Agreement — thirty years of conflict ended through patient negotiation. Truth and reconciliation commissions. Conflict resolution as a political skill. The recognition that wars end in negotiation and that the sooner negotiations begin the fewer die. And the deeper argument: address the social conditions — poverty, inequality, resource competition, climate displacement — that generate conflict.",
+      relates: "Peace is built — not just wished for"
+    },
+
+    // VI. War & Democracy
+    {
+      id: "democratic_peace", type: "thesis", color: "#607d8b",
+      label: "The\nDemocratic\nPeace Theory",
+      rx: .62, ry: .62, cluster: "VI. War & Democracy",
+      desc: "Democratic Peace Theory: liberal democracies do not go to war with each other. Kant's Perpetual Peace — republican constitutions, cosmopolitan law, and free trade as the conditions for lasting peace. The empirical claim has some support: established liberal democracies rarely fight each other directly. The implication drawn: spread democracy and you spread peace. The flaw: the theory does not hold for wars against non-democracies, of which liberal democracies have fought very many.",
+      relates: "Democracies peace with each other — war on everyone else"
+    },
+    {
+      id: "war_propaganda", type: "antithesis", color: "#ff6b35",
+      label: "War\nPropaganda &\nManufactured\nConsent",
+      rx: .78, ry: .70, cluster: "VI. War & Democracy",
+      desc: "Chomsky and Herman's Manufacturing Consent: the corporate media system filters war coverage to serve elite interests — embedding journalists, amplifying official narratives, marginalising dissent. Iraqi weapons of mass destruction that did not exist. The Kuwaiti incubator babies that were fabricated. The Gulf of Tonkin incident that was falsified. Each war requires its propaganda moment — the atrocity, real or invented, that provides the necessary emotional justification for military action.",
+      relates: "Chomsky: manufacturing consent for wars that serve elite interests"
+    },
+    {
+      id: "war_accountability", type: "synthesis", color: "#18c97c",
+      label: "War\nAccountability\n& Media\nFreedom",
+      rx: .70, ry: .84, cluster: "VI. War & Democracy",
+      desc: "The synthesis: genuine democratic accountability for war. Parliamentary votes with real consequences (not whipped). Independent war powers legislation. Journalism that reports from all sides. Whistleblower protection — Chelsea Manning, Julian Assange, Daniel Ellsberg served truth and were prosecuted for it. An informed public that can hold governments accountable for the wars fought in their name requires a free press, an educated citizenry, and the courage to hear uncomfortable truths.",
+      relates: "Whistleblowers serve truth — governments prosecute them for it"
+    }
+  ],
+
+  edges: [
+    ["war_as_policy",          "war_economy"],
+    ["war_economy",            "peace_dividend_lost"],
+    ["arms_industry",          "arms_exports"],
+    ["arms_exports",           "arms_conversion"],
+    ["nato_founding",          "nato_expansion"],
+    ["nato_expansion",         "common_security"],
+    ["resource_war",           "proxy_war"],
+    ["proxy_war",              "international_law"],
+    ["anti_war_tradition",     "peace_movement_limits"],
+    ["peace_movement_limits",  "peace_building"],
+    ["democratic_peace",       "war_propaganda"],
+    ["war_propaganda",         "war_accountability"],
+    // Cross-wiring
+    ["war_economy",            "arms_industry"],
+    ["arms_exports",           "proxy_war"],
+    ["arms_exports",           "resource_war"],
+    ["nato_expansion",         "proxy_war"],
+    ["peace_dividend_lost",    "arms_industry"],
+    ["anti_war_tradition",     "arms_conversion"],
+    ["war_propaganda",         "peace_movement_limits"],
+    ["international_law",      "war_accountability"],
+    ["common_security",        "peace_building"],
+    ["resource_war",           "war_economy"],
+    ["war_accountability",     "anti_war_tradition"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  XIV. RELIGION & LIBERATION THEOLOGY
+// ══════════════════════════════════════════════════════════
+DATA.religion = {
+  label: "Religion & Liberation Theology",
+  desc:  "Religion is contradictory terrain: Althusser's ideological state apparatus, but also the base communities of liberation theology; the nonconformist chapel that produced both the co-operative movement and reactionary temperance politics; Christian nationalism that serves power, and Oscar Romero who died opposing it. The question is always: which side is God on — and who gets to say?",
+  accentColor: '#795548',
+  thesisColor: '#795548',
+
+  clusters: [
+    { label: "I. Religion as Ideology",          x: .10,  y: .05 },
+    { label: "II. Nonconformism & Radical Politics", x: .34, y: .05 },
+    { label: "III. Liberation Theology",         x: .60,  y: .05 },
+    { label: "IV. Christian Nationalism",        x: .84,  y: .05 },
+    { label: "V. Secularism & the Sacred",       x: .28,  y: .54 },
+    { label: "VI. Spiritual Commons",            x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. Religion as Ideology
+    {
+      id: "opium_of_people", type: "thesis", color: "#795548",
+      label: "Religion\nas Ideology",
+      rx: .06, ry: .18, cluster: "I. Religion as Ideology",
+      desc: "Marx: religion is the sigh of the oppressed creature, the heart of a heartless world, and the soul of soulless conditions. It is the opium of the people — not as dismissal, but as diagnosis. Religion offers consolation for suffering it does not challenge; it promises justice in the next world to those denied it in this one; it legitimates existing hierarchies as divinely ordained. The church that tells the poor to be content with their poverty while blessing the rich is doing ideological work for the ruling class.",
+      relates: "Marx: religion as consolation — and as legitimation of power"
+    },
+    {
+      id: "church_state", type: "antithesis", color: "#ff6b35",
+      label: "Church &\nState Power",
+      rx: .17, ry: .18, cluster: "I. Religion as Ideology",
+      desc: "The Established Church as ideological state apparatus: the Church of England with its bishops in the House of Lords, its role in the coronation ceremony, its schools. The Catholic Church's alliance with Franco, Pinochet, and Salazar. Evangelical Christianity's alignment with Trumpism. When the church blesses the existing order, it performs the precise function Marx described — but the ideological function is not inherent to religion; it is a political choice made by religious institutions.",
+      relates: "Bishops in the Lords — the church as pillar of the establishment"
+    },
+    {
+      id: "prophetic_tradition", type: "synthesis", color: "#18c97c",
+      label: "The Prophetic\nTradition",
+      rx: .115, ry: .34, cluster: "I. Religion as Ideology",
+      desc: "But Marx's own text continues: religion is the expression of real distress and a protest against real distress. The prophetic tradition within religion — Amos denouncing those who sell the poor for silver, Jesus overturning the money changers' tables, the Diggers reading the Bible as a manifesto for common land. The same tradition that produced the Peasants' Revolt, the Levellers, the abolitionist movement, the civil rights movement, liberation theology. Religion as protest — not just consolation.",
+      relates: "The same Bible that justified slavery abolished it"
+    },
+
+    // II. Nonconformism & Radical Politics
+    {
+      id: "nonconformism", type: "thesis", color: "#795548",
+      label: "Nonconformism\n& Dissent",
+      rx: .28, ry: .18, cluster: "II. Nonconformism & Radical Politics",
+      desc: "The free churches of the industrial North — Methodist, Baptist, Congregationalist, Quaker — were not the Established Church. They grew from below, in communities of working people, and carried a democratic polity: congregational governance, lay preachers, the priesthood of all believers. The nonconformist chapel produced the co-operative movement, the early trade unions, the Labour Party, and some of the most significant working-class intellectual life of the 19th century. A school of collective self-governance.",
+      relates: "The chapel as school of collective self-governance"
+    },
+    {
+      id: "nonconformism_limits", type: "antithesis", color: "#ff6b35",
+      label: "Temperance,\nRespectability\n& Social Control",
+      rx: .40, ry: .18, cluster: "II. Nonconformism & Radical Politics",
+      desc: "The same nonconformist tradition that produced the Co-op produced the temperance movement — which allied with mill owners against the pub, demanding sobriety from workers who sought pleasure and solidarity in the alehouse. Respectability politics: the aspiration to middle-class morality as a condition of political recognition. The chapel could discipline as well as liberate, imposing a code of personal conduct that served capital's interest in a sober, punctual, productive workforce.",
+      relates: "The chapel that liberated also disciplined"
+    },
+    {
+      id: "radical_christianity", type: "synthesis", color: "#18c97c",
+      label: "Radical\nChristianity &\nSocial Gospel",
+      rx: .34, ry: .34, cluster: "II. Nonconformism & Radical Politics",
+      desc: "The Social Gospel movement: R.H. Tawney's Religion and the Rise of Capitalism, William Temple's Christianity and Social Order (1942) — the blueprint for the welfare state. Keir Hardie's Christian socialism. The Methodist roots of early Labour. The synthesis: a Christianity that took the Sermon on the Mount seriously as social programme — blessed are the poor, the meek shall inherit the earth — and drew radical political consequences from it. Faith as praxis.",
+      relates: "Tawney, Temple, Hardie — Christianity as social programme"
+    },
+
+    // III. Liberation Theology
+    {
+      id: "liberation_theology", type: "thesis", color: "#795548",
+      label: "Liberation\nTheology",
+      rx: .54, ry: .18, cluster: "III. Liberation Theology",
+      desc: "Gustavo Gutierrez, Leonardo Boff, Jon Sobrino — the theologians of the Latin American poor who declared the preferential option for the poor: God is on the side of the poor, and the church must be too. Base communities (comunidades de base): small groups of poor Catholics reading the Bible together, connecting scripture to their conditions of life, developing political consciousness and collective action. A grassroots religious movement that threatened the alliance of church and elite power.",
+      relates: "Gutierrez: the preferential option for the poor"
+    },
+    {
+      id: "romero", type: "antithesis", color: "#ff6b35",
+      label: "Oscar Romero\n& the Martyrs",
+      rx: .66, ry: .18, cluster: "III. Liberation Theology",
+      desc: "Archbishop Oscar Romero of El Salvador, assassinated at the altar in 1980 by a death squad linked to Roberto D'Aubuisson, trained at the US School of the Americas. The Jesuit martyrs of El Salvador, 1989. Dorothy Day. Steve Biko. The liberation theologians and their communities were targeted precisely because they were effective — connecting religious consciousness to political organisation in communities the state could not otherwise reach.",
+      relates: "Romero: shot at the altar for preaching the Gospel to the poor"
+    },
+    {
+      id: "base_communities", type: "synthesis", color: "#18c97c",
+      label: "Base\nCommunities\n& Praxis",
+      rx: .60, ry: .34, cluster: "III. Liberation Theology",
+      desc: "The base community model: small, self-governing communities of practice that combine spiritual life with political education and collective action. The synthesis of liberation theology is not a doctrine but a method — what Freire called praxis, the dialectical unity of reflection and action. The base community reads scripture, analyses its conditions, and acts collectively. The same method as the WEA tutorial class, the trade union branch meeting, the co-operative general meeting.",
+      relates: "Praxis: reflection and action — the method of liberation"
+    },
+
+    // IV. Christian Nationalism
+    {
+      id: "christian_nationalism", type: "thesis", color: "#795548",
+      label: "Christian\nNationalism",
+      rx: .78, ry: .18, cluster: "IV. Christian Nationalism",
+      desc: "The fusion of Christianity and nationalist politics: America as a Christian nation, the Bible as the source of law and policy, Christian identity as the basis of citizenship. From the Moral Majority to the Christian Right to MAGA Christianity — a political movement that uses religious language and imagery to mobilise white cultural anxiety against pluralism, secularism, and demographic change. The cross and the flag as interchangeable symbols.",
+      relates: "Christianity as identity politics for the threatened majority"
+    },
+    {
+      id: "religious_right_politics", type: "antithesis", color: "#ff6b35",
+      label: "Religious\nRight &\nElite Capture",
+      rx: .90, ry: .18, cluster: "IV. Christian Nationalism",
+      desc: "The religious right was constructed as a political project by Republican strategists in the 1970s — galvanised initially not by abortion (a Catholic concern) but by the IRS's threat to remove tax exemptions from segregated Christian academies. Abortion, gay rights, and school prayer were added as mobilising issues. The rank and file are genuine believers; the leadership uses religious mobilisation to deliver votes for an economic programme — tax cuts for the rich, deregulation, union-busting — that serves capital, not Christianity.",
+      relates: "Religious mobilisation in service of economic conservatism"
+    },
+    {
+      id: "religious_pluralism", type: "synthesis", color: "#18c97c",
+      label: "Religious\nPluralism &\nSocial Justice",
+      rx: .84, ry: .34, cluster: "IV. Christian Nationalism",
+      desc: "The synthesis of Christian nationalism is not secularism but religious pluralism as the condition of genuine faith. The interfaith movement — Jewish, Muslim, Christian, Hindu, secular — working together on climate, housing, refugees, poverty. The faith traditions that take seriously their obligations to the stranger, the poor, and the earth against those that use religion as tribal identity. The question is always whether faith is directed outward in solidarity or inward in self-protection.",
+      relates: "Faith directed outward in solidarity — not inward in self-protection"
+    },
+
+    // V. Secularism & the Sacred
+    {
+      id: "secular_humanism", type: "thesis", color: "#795548",
+      label: "Secular\nHumanism",
+      rx: .18, ry: .62, cluster: "V. Secularism & the Sacred",
+      desc: "The Enlightenment project: reason over revelation, science over scripture, human authority over divine command. The secularisation of political life — church and state separated, religious belief privatised, public life conducted in a shared rational language available to all regardless of faith. The achievements are real: the end of theocracy, the protection of non-believers, the development of secular ethics and human rights. The limit: secular rationalism can be as totalising and as blind to its own assumptions as any religion.",
+      relates: "The Enlightenment separation of church and state — real achievement"
+    },
+    {
+      id: "secular_fundamentalism", type: "antithesis", color: "#ff6b35",
+      label: "Secular\nFundamentalism\n& the Sacred\nDismissed",
+      rx: .34, ry: .70, cluster: "V. Secularism & the Sacred",
+      desc: "New Atheism's dismissal of religion as simple delusion — Dawkins, Hitchens, Harris — fails to engage with what religion actually does in human life and communities: provides meaning, community, ritual, ethical framework, and motivation for action. The French laicite that bans religious symbols in schools treats religion as purely private in a way that is itself a political imposition. Secular progressives who cannot speak the language of faith cannot reach the communities where faith is lived.",
+      relates: "Secular progressives who cannot speak the language of faith"
+    },
+    {
+      id: "sacred_commons", type: "synthesis", color: "#18c97c",
+      label: "The Sacred\nas Commons",
+      rx: .24, ry: .84, cluster: "V. Secularism & the Sacred",
+      desc: "The synthesis: the sacred as commons — those dimensions of human experience that are not reducible to market value or individual preference: beauty, meaning, community, solidarity, care for the dead, hope for the unborn. These are produced and sustained collectively, in religious and secular forms alike. The brass band concert is sacred. The allotment is sacred. The general meeting of the co-operative is sacred. The question is not whether we have sacred spaces but how we govern them — and for whom.",
+      relates: "The sacred as what we hold in common — beyond market value"
+    },
+
+    // VI. Spiritual Commons
+    {
+      id: "religious_mutual_aid", type: "thesis", color: "#795548",
+      label: "Religious\nMutual Aid",
+      rx: .62, ry: .62, cluster: "VI. Spiritual Commons",
+      desc: "Before the welfare state, religious institutions provided most social welfare: the church poorbox, the chapel sick fund, the Quaker prison reform movement, Jewish mutual aid societies, Islamic zakat and waqf (endowed charitable trusts). Many still do: food banks, night shelters, debt advice, refugee support — overwhelmingly run by faith communities. The critique of austerity is most viscerally experienced in the food bank queue, and it is largely faith communities witnessing it.",
+      relates: "Faith communities witnessing austerity from the food bank queue"
+    },
+    {
+      id: "religion_capitalism", type: "antithesis", color: "#ff6b35",
+      label: "Prosperity\nGospel &\nReligious\nCapitalism",
+      rx: .78, ry: .70, cluster: "VI. Spiritual Commons",
+      desc: "The prosperity gospel: God rewards faith with material wealth; poverty is a sign of insufficient faith. Mega-churches as corporations. Joel Osteen's Houston Lakewood Church, seating 16,800, closed its doors during Hurricane Harvey. Evangelical Christianity's alignment with neoliberalism: the market is God's economy, inequality is natural, social welfare undermines personal responsibility. A theology purpose-built for capital — and extraordinarily successful in the global South where capitalism is most destructive.",
+      relates: "The theology purpose-built for capital"
+    },
+    {
+      id: "spiritual_resistance", type: "synthesis", color: "#18c97c",
+      label: "Spiritual\nResistance &\nSolidarity",
+      rx: .70, ry: .84, cluster: "VI. Spiritual Commons",
+      desc: "The synthesis: spirituality as a resource for resistance, not consolation for submission. The Quakers who sheltered runaway slaves on the Underground Railroad. The church basements where AA meetings and trade union meetings and civil rights strategy sessions happened simultaneously. The Zapatista communities whose autonomy is rooted in indigenous cosmology. The mosque that housed the Grenfell survivors. Spiritual communities as the underground infrastructure of solidarity — present where the state is not.",
+      relates: "Spiritual communities as underground infrastructure of solidarity"
+    }
+  ],
+
+  edges: [
+    ["opium_of_people",        "church_state"],
+    ["church_state",           "prophetic_tradition"],
+    ["nonconformism",          "nonconformism_limits"],
+    ["nonconformism_limits",   "radical_christianity"],
+    ["liberation_theology",    "romero"],
+    ["romero",                 "base_communities"],
+    ["christian_nationalism",  "religious_right_politics"],
+    ["religious_right_politics","religious_pluralism"],
+    ["secular_humanism",       "secular_fundamentalism"],
+    ["secular_fundamentalism", "sacred_commons"],
+    ["religious_mutual_aid",   "religion_capitalism"],
+    ["religion_capitalism",    "spiritual_resistance"],
+    // Cross-wiring
+    ["prophetic_tradition",    "liberation_theology"],
+    ["radical_christianity",   "liberation_theology"],
+    ["nonconformism",          "religious_mutual_aid"],
+    ["base_communities",       "sacred_commons"],
+    ["christian_nationalism",  "church_state"],
+    ["religious_pluralism",    "spiritual_resistance"],
+    ["sacred_commons",         "spiritual_resistance"],
+    ["religious_mutual_aid",   "base_communities"],
+    ["prophetic_tradition",    "radical_christianity"],
+    ["spiritual_resistance",   "base_communities"],
+    ["secular_humanism",       "prophetic_tradition"]
+  ]
+};
+
+// ══════════════════════════════════════════════════════════
+//  XVI. ADDICTION, CRIME & SOCIAL CONTROL
+// ══════════════════════════════════════════════════════════
+DATA.addiction = {
+  label: "Addiction, Crime & Social Control",
+  desc:  "The War on Drugs is a class war. Crime is produced by inequality and punished selectively along race and class lines. The prison industrial complex profits from mass incarceration. Addiction is a response to pain — social, economic, and psychological — and criminalising it intensifies the conditions that cause it. Harm reduction, decriminalisation, and recovery as commons are the synthesis.",
+  accentColor: '#ff5722',
+  thesisColor: '#ff5722',
+
+  clusters: [
+    { label: "I. The War on Drugs",              x: .10,  y: .05 },
+    { label: "II. Crime & Inequality",           x: .34,  y: .05 },
+    { label: "III. The Prison Industrial Complex", x: .60, y: .05 },
+    { label: "IV. Addiction as Social Product",  x: .84,  y: .05 },
+    { label: "V. Harm Reduction",                x: .28,  y: .54 },
+    { label: "VI. Recovery & Community",         x: .72,  y: .54 }
+  ],
+
+  nodes: [
+    // I. The War on Drugs
+    {
+      id: "drug_prohibition", type: "thesis", color: "#ff5722",
+      label: "Drug\nProhibition",
+      rx: .06, ry: .18, cluster: "I. The War on Drugs",
+      desc: "The prohibition of drugs — narcotics, cannabis, psychedelics — was established through international treaties from 1912 onward, consolidated in the UN Single Convention on Narcotic Drugs (1961). The stated justification: public health and moral protection. The actual effect: the creation of enormously profitable illegal markets controlled by organised crime, the financing of insurgencies and paramilitary groups through drug revenue, and the persecution of drug users as criminals rather than people in need of care.",
+      relates: "Prohibition creates the criminal market it claims to combat"
+    },
+    {
+      id: "war_on_drugs", type: "antithesis", color: "#ff6b35",
+      label: "The War\non Drugs",
+      rx: .17, ry: .18, cluster: "I. The War on Drugs",
+      desc: "Nixon aide John Ehrlichman (2016 confession): we knew we could not make it illegal to be against the Vietnam war or to be Black, but by getting the public to associate hippies with marijuana and Blacks with heroin, and then criminalising both heavily, we could disrupt those communities. The War on Drugs was never about drugs — it was about targeting political opponents and communities of colour. Reagan's crack cocaine sentencing disparity: 100:1 versus powder cocaine, used predominantly by white users.",
+      relates: "Ehrlichman: the War on Drugs was always about race and politics"
+    },
+    {
+      id: "decriminalisation", type: "synthesis", color: "#18c97c",
+      label: "Decriminalisation\n& Regulation",
+      rx: .115, ry: .34, cluster: "I. The War on Drugs",
+      desc: "Portugal decriminalised all drugs in 2001 — treating possession as a health issue, not a criminal one. Drug-related deaths fell, HIV infections among drug users fell, drug use did not increase. Oregon followed in 2020. Cannabis is legally regulated in Canada, Uruguay, Germany, and numerous US states. The evidence is unambiguous: criminalisation does not reduce drug use, it simply adds the harms of criminalisation to the harms of drugs. Regulation, taxation, and health treatment work better.",
+      relates: "Portugal 2001: decriminalisation works — evidence is clear"
+    },
+
+    // II. Crime & Inequality
+    {
+      id: "crime_social_product", type: "thesis", color: "#ff5722",
+      label: "Crime as\nSocial Product",
+      rx: .28, ry: .18, cluster: "II. Crime & Inequality",
+      desc: "Durkheim: crime is a normal feature of all societies — its rate and character reflect social organisation. Edwin Sutherland: crime is learned behaviour, shaped by differential association. The correlation between inequality, poverty, and crime rates is among the most robust in social science. High-inequality societies have higher crime rates than low-inequality ones — not because poor people are more criminal but because inequality produces the conditions — desperation, status anxiety, community breakdown — in which crime emerges.",
+      relates: "Wilkinson & Pickett: more unequal societies have more crime"
+    },
+    {
+      id: "white_collar_crime", type: "antithesis", color: "#ff6b35",
+      label: "White Collar\nCrime &\nSelective\nEnforcement",
+      rx: .40, ry: .18, cluster: "II. Crime & Inequality",
+      desc: "Edwin Sutherland coined white-collar crime in 1949: crimes committed by the powerful in the course of their occupation — fraud, embezzlement, tax evasion, environmental crime, workplace safety violations, financial market manipulation. The 2008 financial crisis: trillions in fraud, not a single senior banker prosecuted. Corporate tax avoidance costs the UK £35 billion per year — more than the entire social care budget. Crime is defined and enforced in ways that target the poor and protect the powerful.",
+      relates: "Not a single banker prosecuted for the 2008 crisis"
+    },
+    {
+      id: "restorative_justice", type: "synthesis", color: "#18c97c",
+      label: "Restorative\nJustice",
+      rx: .34, ry: .34, cluster: "II. Crime & Inequality",
+      desc: "Restorative justice: bringing those who have caused harm and those who have been harmed together to address the consequences and repair the relationship. Evidence: lower reoffending rates, higher victim satisfaction, lower cost than imprisonment. But the deeper synthesis is structural: address the conditions — poverty, inequality, addiction, trauma, community breakdown — that generate crime rather than simply punishing its symptoms. Justice as healing, not punishment.",
+      relates: "Lower reoffending, higher satisfaction — at lower cost"
+    },
+
+    // III. The Prison Industrial Complex
+    {
+      id: "mass_incarceration", type: "thesis", color: "#ff5722",
+      label: "Mass\nIncarceration",
+      rx: .54, ry: .18, cluster: "III. The Prison Industrial Complex",
+      desc: "The United States has 5% of the world's population and 25% of its prisoners: 2.3 million people incarcerated, disproportionately Black and poor. The UK has the highest imprisonment rate in Western Europe. Mass incarceration is not a response to crime — crime rates fell as incarceration rates rose, and no causal relationship has been established. It is a response to the social disruption produced by deindustrialisation, drug prohibition, and the defunding of mental health services.",
+      relates: "5% of the world's population — 25% of its prisoners"
+    },
+    {
+      id: "prison_profit", type: "antithesis", color: "#ff6b35",
+      label: "Prison\nIndustrial\nComplex",
+      rx: .66, ry: .18, cluster: "III. The Prison Industrial Complex",
+      desc: "Private prisons: G4S, Serco, CCA in the US — corporations profiting from the incarceration of human beings, with financial incentives to keep cells full and oppose sentencing reform. Prison labour: the 13th Amendment abolished slavery except as punishment for crime — US prisoners earn cents per hour producing goods for major corporations. The same system that criminalises drug use profits from incarcerating drug users. The prison industrial complex is a form of racialised capitalism.",
+      relates: "The 13th Amendment: slavery legal as punishment for crime"
+    },
+    {
+      id: "prison_abolition", type: "synthesis", color: "#18c97c",
+      label: "Abolition &\nTransformative\nJustice",
+      rx: .60, ry: .34, cluster: "III. The Prison Industrial Complex",
+      desc: "Angela Davis's Are Prisons Obsolete?: the prison does not solve the problems it claims to address — it is itself a problem. Prison abolition does not mean no consequences for harm, but a transformation of the conditions that generate harm and the development of alternative accountability processes. Transformative justice: community accountability, mental health support, restorative processes. Not utopian — the Nordic prison system demonstrates that low incarceration, high rehabilitation, and low reoffending are achievable.",
+      relates: "Angela Davis: prisons are not solutions — they are the problem"
+    },
+
+    // IV. Addiction as Social Product
+    {
+      id: "addiction_disease", type: "thesis", color: "#ff5722",
+      label: "Addiction\nas Disease",
+      rx: .78, ry: .18, cluster: "IV. Addiction as Social Product",
+      desc: "The disease model of addiction: addiction is a chronic brain disorder, characterised by compulsive drug seeking despite harmful consequences. This model was a genuine advance over the moral failure model — it destigmatised addiction and opened the door to medical treatment. The 12-step tradition, medication-assisted treatment, the recognition that willpower alone is insufficient. Important — but incomplete: it locates the problem in the individual brain and ignores the social conditions that fill the brain with pain.",
+      relates: "Disease model: advance over moral failure — but incomplete"
+    },
+    {
+      id: "addiction_social", type: "antithesis", color: "#ff6b35",
+      label: "Addiction\nas Response\nto Pain",
+      rx: .90, ry: .18, cluster: "IV. Addiction as Social Product",
+      desc: "Johann Hari's Chasing the Scream, Bruce Alexander's Rat Park experiment: addiction is not primarily a property of drugs but a response to a life that offers insufficient connection, meaning, and hope. Soldiers returning from Vietnam, who were using heroin at high rates in the field, mostly stopped when they returned to their lives. The opioid epidemic in post-industrial America followed the deindustrialisation of communities — the drug filled the space left by the loss of work, community, and purpose.",
+      relates: "Hari: the opposite of addiction is connection"
+    },
+    {
+      id: "addiction_capitalism", type: "synthesis", color: "#18c97c",
+      label: "Addiction\nCapitalism",
+      rx: .84, ry: .34, cluster: "IV. Addiction as Social Product",
+      desc: "The synthesis: capitalism produces addiction as both supply and demand. Supply: the pharmaceutical companies that created the opioid epidemic — Purdue Pharma marketing OxyContin as non-addictive to doctors, creating millions of addicts for profit. The alcohol industry, the gambling industry, the ultra-processed food industry, the social media industry — all engineered for compulsive consumption. And the demand: communities stripped of meaning, connection, and hope by deindustrialisation, austerity, and atomisation.",
+      relates: "Purdue Pharma created the opioid epidemic for profit"
+    },
+
+    // V. Harm Reduction
+    {
+      id: "harm_reduction", type: "thesis", color: "#ff5722",
+      label: "Harm\nReduction",
+      rx: .18, ry: .62, cluster: "V. Harm Reduction",
+      desc: "Harm reduction: meet people where they are, reduce the immediate harms of drug use without requiring abstinence as a condition of support. Needle exchanges prevent HIV and hepatitis C transmission. Safe consumption rooms prevent overdose deaths — not one death in 50 years across 100 facilities worldwide. Naloxone distribution saves lives. Heroin-assisted treatment (available in Switzerland, the UK, Canada) dramatically reduces crime, homelessness, and death among the most severely dependent users.",
+      relates: "Zero overdose deaths in 50 years of safe consumption rooms"
+    },
+    {
+      id: "abstinence_only", type: "antithesis", color: "#ff6b35",
+      label: "Abstinence\nOnly &\nMoral Panic",
+      rx: .34, ry: .70, cluster: "V. Harm Reduction",
+      desc: "The abstinence-only approach: recovery means complete cessation, and anything short of this is enabling. Politically, harm reduction is attacked as encouraging drug use — despite overwhelming evidence to the contrary. Safe consumption rooms blocked in the UK for twenty years of political cowardice while thousands died of preventable overdoses. The moral panic around drugs — fed by tabloid coverage and political positioning — kills people by preventing evidence-based policy.",
+      relates: "Political cowardice while thousands die preventable deaths"
+    },
+    {
+      id: "safe_supply", type: "synthesis", color: "#18c97c",
+      label: "Safe Supply\n& Public\nHealth Model",
+      rx: .24, ry: .84, cluster: "V. Harm Reduction",
+      desc: "The synthesis: a full public health model for drugs — harm reduction, treatment on demand, safe supply for the most dependent users, decriminalisation of personal possession, regulation of currently illegal markets, and investment in the social conditions that prevent addiction. British Columbia's safe supply programme. Glasgow's proposed heroin-assisted treatment. The evidence base is complete — what is lacking is political will, and what prevents political will is moral panic and vested interests in prohibition.",
+      relates: "The evidence is complete — only political will is lacking"
+    },
+
+    // VI. Recovery & Community
+    {
+      id: "recovery_movement", type: "thesis", color: "#ff5722",
+      label: "Recovery\nMovement",
+      rx: .62, ry: .62, cluster: "VI. Recovery & Community",
+      desc: "The recovery movement: people with lived experience of addiction organising collectively — peer support, recovery coaching, advocacy for better services. Alcoholics Anonymous and its offshoots as the original peer support model — mutual aid applied to addiction recovery. The recovery capital framework: what resources does a person need to sustain recovery? Social relationships, meaningful activity, housing, employment, hope. Recovery is not just individual — it is social.",
+      relates: "Recovery capital: social relationships, meaning, housing, hope"
+    },
+    {
+      id: "criminalisation_recovery", type: "antithesis", color: "#ff6b35",
+      label: "Criminalisation\nUndermines\nRecovery",
+      rx: .78, ry: .70, cluster: "VI. Recovery & Community",
+      desc: "A criminal record for drug possession destroys the recovery capital that makes sustained recovery possible: housing (criminal record bars access to social housing), employment (many jobs require disclosure), travel (US visa denial), family relationships (child custody implications). The very act of criminalisation removes the social conditions necessary for recovery. Punishing addiction produces the conditions that perpetuate it — the logic of criminalisation is self-defeating.",
+      relates: "Criminalisation removes the conditions that make recovery possible"
+    },
+    {
+      id: "recovery_commons", type: "synthesis", color: "#18c97c",
+      label: "Recovery\nas Commons",
+      rx: .70, ry: .84, cluster: "VI. Recovery & Community",
+      desc: "The synthesis: recovery as a commons — not an individual achievement but a collective production. Recovery communities, peer support networks, recovery cafes, social enterprises run by people in recovery, communities that welcome rather than stigmatise those who have struggled. The same logic as every other form of mutual aid: we do better together. And the structural conditions: decent housing, meaningful work, income security, community connection — the social determinants of recovery are the social determinants of health.",
+      relates: "Recovery as mutual aid — we do better together"
+    }
+  ],
+
+  edges: [
+    ["drug_prohibition",       "war_on_drugs"],
+    ["war_on_drugs",           "decriminalisation"],
+    ["crime_social_product",   "white_collar_crime"],
+    ["white_collar_crime",     "restorative_justice"],
+    ["mass_incarceration",     "prison_profit"],
+    ["prison_profit",          "prison_abolition"],
+    ["addiction_disease",      "addiction_social"],
+    ["addiction_social",       "addiction_capitalism"],
+    ["harm_reduction",         "abstinence_only"],
+    ["abstinence_only",        "safe_supply"],
+    ["recovery_movement",      "criminalisation_recovery"],
+    ["criminalisation_recovery","recovery_commons"],
+    // Cross-wiring
+    ["war_on_drugs",           "mass_incarceration"],
+    ["war_on_drugs",           "crime_social_product"],
+    ["addiction_social",       "harm_reduction"],
+    ["addiction_capitalism",   "mass_incarceration"],
+    ["prison_profit",          "war_on_drugs"],
+    ["decriminalisation",      "harm_reduction"],
+    ["criminalisation_recovery","mass_incarceration"],
+    ["recovery_commons",       "restorative_justice"],
+    ["safe_supply",            "recovery_commons"],
+    ["addiction_capitalism",   "addiction_social"],
+    ["prison_abolition",       "restorative_justice"],
+    ["recovery_movement",      "harm_reduction"]
+  ]
+};

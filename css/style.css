@@ -173,16 +173,67 @@ html, body {
   width: clamp(170px, 23vw, 230px);
   text-align: left;
   cursor: pointer;
-  transition: background .25s, border-color .25s, transform .2s, box-shadow .25s;
+  transition: background .3s, border-color .3s, transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
   display: flex;
   flex-direction: column;
   gap: 7px;
   font-family: inherit;
   color: var(--text);
+  position: relative;
+  overflow: hidden;
 }
+
+/* Shimmer sweep on hover */
+.icard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255,255,255,.07) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0s;
+  pointer-events: none;
+}
+.icard:hover::after {
+  transform: translateX(100%);
+  transition: transform .5s ease;
+}
+
+/* Arrow indicator */
+.icard::before {
+  content: '→';
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: .85rem;
+  color: var(--c);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .25s, transform .25s cubic-bezier(.34,1.56,.64,1);
+}
+.icard:hover::before {
+  opacity: .7;
+  transform: translateX(0);
+}
+
 .icard:hover {
   background: rgba(255,255,255,.07);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  border-top-color: var(--c);
+}
+
+/* Pulse on the number when hovered */
+.icard:hover .icard-num {
+  animation: numPulse .6s ease;
+}
+@keyframes numPulse {
+  0%   { opacity: .7; }
+  50%  { opacity: 1; letter-spacing: .3em; }
+  100% { opacity: .7; }
 }
 .icard--classical { --c: #f5a623; }
 .icard--modern    { --c: #3b9eff; }
@@ -193,6 +244,13 @@ html, body {
 .icard--nation    { --c: #2196f3; }
 .icard--postindustrial { --c: #00bcd4; }
 .icard--democracy      { --c: #e91e63; }
+.icard--technology     { --c: #00e676; }
+.icard--housing        { --c: #ff9800; }
+.icard--health         { --c: #f44336; }
+.icard--education      { --c: #9c27b0; }
+.icard--war            { --c: #607d8b; }
+.icard--religion       { --c: #795548; }
+.icard--addiction      { --c: #ff5722; }
 .icard:hover { border-top-color: var(--c); box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 30px rgba(var(--c-rgb, 255,255,255),.06); }
 .icard--classical:hover { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(245,166,35,.1); }
 .icard--modern:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(59,158,255,.1); }
@@ -203,6 +261,13 @@ html, body {
 .icard--nation:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(33,150,243,.18); }
 .icard--postindustrial:hover { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(0,188,212,.18); }
 .icard--democracy:hover      { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(233,30,99,.18); }
+.icard--technology:hover    { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(0,230,118,.15); }
+.icard--housing:hover       { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(255,152,0,.15); }
+.icard--health:hover        { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(244,67,54,.15); }
+.icard--education:hover     { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(156,39,176,.15); }
+.icard--war:hover           { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(96,125,139,.15); }
+.icard--religion:hover      { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(121,85,72,.15); }
+.icard--addiction:hover     { box-shadow: 0 12px 40px rgba(0,0,0,.5), 0 0 40px rgba(255,87,34,.15); }
 
 .icard-num {
   font-family: 'Cinzel', serif;
@@ -562,6 +627,13 @@ canvas {
 #app[data-view="democracy"] {
   --accent: #e91e63;
 }
+#app[data-view="technology"]    { --accent: #00e676; }
+#app[data-view="housing"]       { --accent: #ff9800; }
+#app[data-view="health"]        { --accent: #f44336; }
+#app[data-view="education"]     { --accent: #9c27b0; }
+#app[data-view="war"]           { --accent: #607d8b; }
+#app[data-view="religion"]      { --accent: #795548; }
+#app[data-view="addiction"]     { --accent: #ff5722; }
 
 /* ══════════════════════════════════════════════════════════
    SCROLLBAR
